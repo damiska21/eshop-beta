@@ -1,1 +1,1 @@
-# eshop-beta
+# E-shop team beta
