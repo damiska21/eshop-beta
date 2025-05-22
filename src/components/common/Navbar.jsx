@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavbarRoutes from "../../routes/RoutesSettings";
-import { FaFireAlt } from "react-icons/fa"; // ikonka jako logo
-import "./Navbar.css"; // vlastní CSS
+import { FaFireAlt } from "react-icons/fa";
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
