@@ -30,7 +30,7 @@ export default function Products() {
 
   return (
     <>
-      <p>seznam produktů</p>
+      <h1>Produkty</h1>
       <div className="products">{products}</div>
     </>
   );
