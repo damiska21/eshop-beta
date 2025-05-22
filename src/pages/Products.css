@@ -1,0 +1,23 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;       /* aby se položky zalamovaly do dalších řádků */
+  justify-content: center; /* zarovná produkty na střed řádku */
+  gap: 2rem;             /* mezery mezi kartami */
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+@media (max-width: 720px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}

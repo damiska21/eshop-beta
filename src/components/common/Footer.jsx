@@ -1,4 +1,5 @@
 import "./Footer.css";
+import Loader from "./Loader";
 
 function Footer() {
   return (

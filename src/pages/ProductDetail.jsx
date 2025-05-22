@@ -1,31 +1,25 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import Product from "../components/common/Product.jsx";
+import Loader from "../components/common/Loader.jsx";
 
 export default function ProductDetail() {
   const { id } = useParams();
-  const [product, setProduct] = useState(() => "");
+  const [product, setProduct] = useState(null);
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/" + id)
-      .then((response) => response.json())
-      .then((json) => pullData(json));
-  }, []);
-  function pullData(json) {
-    setProduct(
-      React.createElement(Product, {
-        id: json.id,
-        title: json.title,
-        description: json.description,
-        image: json.image,
-        price: json.price,
-      })
-    );
-  }
-  if (!product) return <p>Načítání produktu...</p>;
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  }, [id]);
+
+  if (!product) return <Loader />;
+
   return (
-    <>
-      <h1>detail produktu</h1>
-      {product}
-    </>
+    <div className="product-detail">
+      <h1>{product.title}</h1>
+      <img src={product.image} alt={product.title} style={{ maxWidth: "300px" }} />
+      <p>{product.description}</p>
+      <p style={{ fontWeight: "bold", fontSize: "1.2rem" }}>{product.price} Kč</p>
+    </div>
   );
 }

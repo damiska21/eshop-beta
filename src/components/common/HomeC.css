@@ -1,0 +1,30 @@
+/* HomeC.css */
+h1, h2 {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f97316; /* oranžová */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #eee;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}

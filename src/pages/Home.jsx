@@ -1,11 +1,9 @@
-import Footer from "../components/common/Footer"
+import HomeC from "../components/common/HomeC";
 export default function Home() {
-    
-    return (
-        <>
-        <p>domácí stránka</p>
-
-        
-        </>
-    )
+  return (
+    <>
+      <HomeC />
+      
+    </>
+  );
 }
