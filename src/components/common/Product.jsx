@@ -14,10 +14,10 @@ function Product({ id, title, description, image, price, handleAddToCart }) {
       </Link>
       <button
         className="card-button"
-        onClick={(e) => {
-          e.preventDefault(); // zabrání přesměrování
+      /*  onClick={(e) => {
+          e.preventDefault();  zabrání přesměrování
           handleAddToCart(id);
-        }}
+        }}*/
       >
         Přidat do košíku
       </button>
