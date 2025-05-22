@@ -5,6 +5,7 @@ import "./Products.css";
 
 export default function Products() {
   const [products, setProducts] = useState(null);
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -14,7 +15,7 @@ export default function Products() {
 
   function pullData(json) {
     const batchId = Math.random();
-    const exporting = json.map((item, i) =>
+    const mapped = json.map((item, i) => (
       <Product
         key={item.id + batchId}
         id={item.id}
@@ -23,7 +24,15 @@ export default function Products() {
         image={item.image}
         price={item.price}
       />
-    );
+    ));
+    let exporting = [];
+
+    //pokud je item ve filteru nebo pokud je filter prázdný zobrazit produkt
+    mapped.forEach((element) => {
+      if (filter.includes(element.props.id) || filter.length === 0) {
+        exporting.push(element);
+      }
+    });
     setProducts(exporting);
   }
 

@@ -4,7 +4,6 @@ import Product from "../components/common/Product";
 
 export default function Cart() {
   const { cart } = useCart();
-  console.log(cart);
   const [products, setProducts] = useState(() => ""); //produkty v košíku
   useEffect(() => {
     //pullneme všechny itemy a pak zobrazíme ty, které má uživatel v košíku
@@ -15,8 +14,6 @@ export default function Cart() {
   function displayCartData(ids, json) {
     let exporting = [];
     let batchId = Math.random(); //aby si react nestěžoval
-    console.log(ids);
-    console.log(json);
     for (let i = 0; i < ids.length; i++) {
       let productId = ids[i] - 1; //v tom jsonu začínají idčka na 1
       exporting.push(
