@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import NavbarRoutes from "../../routes/RoutesSettings";
 import { FaFireAlt } from "react-icons/fa";
 import "./Navbar.css";
+import { useCart } from "../../contexts/CartContext";
 
 export default function Navbar() {
+  const { price } = useCart();
   return (
     <>
       <nav className="navbar">
@@ -19,6 +21,9 @@ export default function Navbar() {
           </Link>
           <Link to="/contact-us" className="nav-link">
             Kontakt
+          </Link>
+          <Link to="/cart" className="nav-link">
+            Košík - {price}
           </Link>
         </div>
       </nav>

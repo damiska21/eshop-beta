@@ -21,9 +21,7 @@ export default function ProductDetail() {
       })
     );
   }
-
-  // Tady bys normálně fetchnul nebo našel produkt podle ID
-  // Např. z lokálního pole nebo API
+  if (!product) return <p>Načítání produktu...</p>;
   return (
     <>
       <h1>detail produktu</h1>
