@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer-left">
           <iframe
             title="Mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.951717114607!2d14.423442915760406!3d50.0865357794297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94fbc4aee32d%3A0x400af0f661a7b70!2zUHJhaHFow6fDoQ!5e0!3m2!1scs!2scz!4v1684826630000!5m2!1scs!2scz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2316.889483122326!2d14.405351576037416!3d50.081676813848446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94fb3b68cc1f%3A0xe4969e96af63265d!2zTWFsb3N0cmFuc2vDqSBuw6FixZkuIDEsIDExOCAwMCBNYWzDoSBTdHJhbmE!5e1!3m2!1scs!2scz!4v1747918476585!5m2!1scs!2scz"  
             width="280"
             height="180"
             style={{ border: 0, borderRadius: "8px" }}
