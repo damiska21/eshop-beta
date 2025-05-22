@@ -1,0 +1,62 @@
+.product-detail {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e; /* tmavé pozadí */
+  color: white;
+  min-height: 100vh;
+}
+
+.product-image {
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.product-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.product-detail p {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.price-cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #f97316; /* oranžový akcent */
+  margin: 0;
+}
+
+.add-to-cart-btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  background-color: #f97316;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #fb923c; /* světlejší oranžová při hoveru */
+  transform: scale(1.05);
+}
