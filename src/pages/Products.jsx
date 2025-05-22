@@ -27,10 +27,9 @@ export default function Products() {
     }
     setProducts(exporting);
   }
-
+  if (!products) return <p>Načítání seznamu...</p>;
   return (
     <>
-      <h1>Produkty</h1>
       <div className="products">{products}</div>
     </>
   );

@@ -1,7 +1,10 @@
 import "./Product.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../contexts/CartContext";
 
-function Product({ id, title, description, image, price, handleAddToCart }) {
+function Product({ id, title, description, image, price }) {
+  const { addToCart } = useCart();
+
   return (
     <div className="product-card">
       <Link to={`/product/${id}`} className="card-link">
@@ -14,10 +17,10 @@ function Product({ id, title, description, image, price, handleAddToCart }) {
       </Link>
       <button
         className="card-button"
-      /*  onClick={(e) => {
-          e.preventDefault();  zabrání přesměrování
-          handleAddToCart(id);
-        }}*/
+        onClick={(e) => {
+          e.preventDefault(); //zabrání přesměrování
+          addToCart(id);
+        }}
       >
         Přidat do košíku
       </button>
