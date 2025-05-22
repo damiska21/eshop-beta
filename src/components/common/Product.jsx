@@ -1,20 +1,27 @@
+import "./Product.css";
 import { Link } from "react-router-dom";
 
-function Product({ id, title, description, image, price }) {
+function Product({ id, title, description, image, price, handleAddToCart }) {
   return (
-    <Link to={`/product/${id}`} className="no-decoration">
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={image} className="card-img-top" alt={title} />
+    <div className="product-card">
+      <Link to={`/product/${id}`} className="card-link">
+        <img src={image} alt={title} className="card-img" />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}</p>
-          <p>{price} Kč</p>
-          <button onClick={handleAddToCart} className="btn btn-primary">
-            Přidat do košíku
-          </button>
+          <p className="card-description">{description}</p>
+          <p className="card-price">{price} Kč</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+      <button
+        className="card-button"
+        onClick={(e) => {
+          e.preventDefault(); // zabrání přesměrování
+          handleAddToCart(id);
+        }}
+      >
+        Přidat do košíku
+      </button>
+    </div>
   );
 }
 
