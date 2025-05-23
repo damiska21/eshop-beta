@@ -29,7 +29,7 @@ export default function Navbar() {
             Kontakt
           </Link>
           <Link to="/cart" className="nav-link">
-            <FaCartArrowDown /> {price}
+            <FaCartArrowDown /> {price} Kč
           </Link>
         </div>
       </nav>
