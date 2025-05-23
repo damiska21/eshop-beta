@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Loader from "../components/common/Loader.jsx";
 import "./ProductDetail.css"; // Import CSS
+import { useCart } from "../contexts/CartContext.jsx";
 
 export default function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/" + id)
@@ -15,6 +17,7 @@ export default function ProductDetail() {
 
   const handleAddToCart = () => {
     console.log("Přidáno do košíku:", product);
+    addToCart(product.id);
   };
 
   if (!product) return <Loader />;
@@ -22,11 +25,7 @@ export default function ProductDetail() {
   return (
     <div className="product-detail">
       <h1>{product.title}</h1>
-      <img
-        src={product.image}
-        alt={product.title}
-        className="product-image"
-      />
+      <img src={product.image} alt={product.title} className="product-image" />
       <p>{product.description}</p>
 
       <div className="price-cart-row">
