@@ -1,23 +1,239 @@
-.products {
-  display: flex;
-  flex-wrap: wrap;       /* aby se položky zalamovaly do dalších řádků */
-  justify-content: center; /* zarovná produkty na střed řádku */
-  gap: 2rem;             /* mezery mezi kartami */
-  padding: 1rem;
-  max-width: 1200px;
+/* --- Kontejner celé stránky s produkty a filtrem --- */
+.products-page {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
 }
 
+/* --- Filtr --- */
+.filter {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  border-radius: 3px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  min-width: 280px;
+  max-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: margin-left 0.3s ease, transform 0.3s ease;
+  z-index: -1;
+}
 
+.filter h3 {
+  font-size: 1.3rem;
+  color: #f97316;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-@media (max-width: 720px) {
+.filter label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.filter-select,
+.filter-input {
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #2c2c2c;
+  color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+.reset-button {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background-color: #f97316;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #ea580c;
+}
+
+/* --- Produkty --- */
+.products {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* --- Stav: filtr viditelný --- */
+.products-page.filter-visible .filter {
+  margin-left: 0;
+  transform: translateX(0);
+}
+
+.products-page.filter-visible .products {
+   margin-left: 300px;
+  width: calc(100% - 300px - 1.5rem);
+}
+
+/* --- Stav: filtr skrytý --- */
+.products-page.filter-hidden .filter {
+  margin-left: -320px;
+  transform: translateX(-100%);
+}
+
+.products-page.filter-hidden .products {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* --- Tlačítko filtru --- */
+.filter-toggle {
+  background-color: #f97316;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  position: static; /* Původně bylo fixed */
+  display: inline-block;
+}
+
+.filter-toggle-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.filter-toggle:hover {
+  background-color: #ea580c;
+}
+
+/* --- Responzivita --- */
+
+/* Větší obrazovky (desktop) */
+@media (min-width: 1025px) {
+  .filter {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+    z-index: 1050;
+  }
+
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-left: 300px;
+    gap: 1.5rem;
+  }
+
+  /* Při skrytém filtru filtr schováme zleva */
+  .products-page.filter-hidden .filter {
+    margin-left: -320px;
+    transform: translateX(0);
+  }
+
+  /* Produkty se rozšíří na plnou šířku */
+  .products-page.filter-hidden .products {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Produkty - 4 na řádek s mezerou */
+  .products > * {
+    flex: 0 0 calc(25% - 1.5rem);
   }
 }
 
-@media (max-width: 480px) {
+/* Menší obrazovky (tablet, mobil) */
+@media (max-width: 1024px) {
+  .products-page {
+    flex-direction: column;
+  }
+
+  .filter {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    height: 100vh;
+    width: 80vw;
+    max-width: 300px;
+    border-radius: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.7);
+    padding: 2rem 1rem;
+    z-index: 1050;
+  }
+
+  /* Výchozí stav - filtr mimo obrazovku vlevo */
+  .products-page.filter-hidden .filter {
+    transform: translateX(-100%);
+  }
+
+  /* Při viditelném filtru - vysunutý */
+  .products-page.filter-visible .filter {
+    transform: translateX(0);
+  }
+
+  .products {
+    margin-left: 0 !important;
+    width: 100% !important;
+    gap: 1rem;
+  }
+
+  /* Produkty - 2 na řádek */
+  .products > * {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 2.5rem;
+    justify-items: stretch; 
+  }
+}
+
+/* Menší desktopy a velké tablety: 3 sloupce s min šířkou */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Tablety: 2 sloupce */
+@media (min-width: 600px) and (max-width: 991px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Mobily: 1 sloupec */
+@media (max-width: 599px) {
   .products {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
