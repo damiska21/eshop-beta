@@ -15,12 +15,30 @@
         "termsconditions":"Obchodní podmínky",
         "privacypolicy":"Zásady ochrany osobních údajů"
     },
-    "home":{
-        "h1":"Vítejte v E-shopu týmu Beta",
-        "h2":"O nás",
-        "text1":"Jsme tým nadšených odborníků, kteří se věnují tvorbě kvalitního e-shopu, kde najdete široký výběr produktů za skvělé ceny. Naším cílem je zajistit vám pohodlný a bezpečný nákup s rychlým doručením.",
-        "text2": "Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a přidáváme nové funkce, které vám usnadní výběr a nákup."
-    },
+    "home": {
+  "h1": "Vítejte v E-shopu týmu Beta",
+  "h2": "O nás",
+  "text1": "Jsme tým nadšených odborníků, kteří se věnují tvorbě kvalitního e-shopu, kde najdete široký výběr produktů za skvělé ceny. Naším cílem je zajistit vám pohodlný a bezpečný nákup s rychlým doručením.",
+  "text2": "Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a přidáváme nové funkce, které vám usnadní výběr a nákup.",
+  "benefits": {
+    "title": "Proč nakupovat u nás?",
+    "items": [
+      {
+        "title": "Rychlé doručení",
+        "text": "Zboží odesíláme do 24 hodin od objednání."
+      },
+      {
+        "title": "Zákaznická podpora",
+        "text": "Náš tým je vám k dispozici každý den."
+      },
+      {
+        "title": "Bezpečný nákup",
+        "text": "Vaše data chráníme a platby jsou zabezpečené."
+      }
+    ]
+  }
+},
+
     "products":{
         "title":"Produkty",
         "searching":"vyhledávání",
