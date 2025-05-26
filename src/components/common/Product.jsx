@@ -5,6 +5,7 @@ import { useCart } from "../../contexts/CartContext";
 import { RatingContext } from "../../contexts/RatingContext";
 import { useLocalization } from "../../contexts/LocalizationContext";
 
+
 function Product({ id, title, description, image, price }) {
   const { addToCart } = useCart();
   const { strings } = useLocalization();

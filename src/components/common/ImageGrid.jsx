@@ -6,7 +6,7 @@ const images = [
     alt: "Košile"
   },
   {
-    src: "https://images.unsplash.com/photo-1503342452485-86b7f54527dd?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2020/01/09/15/03/pomeranian-4752990_1280.jpg",
     alt: "Boty"
   },
   {
@@ -14,12 +14,20 @@ const images = [
     alt: "Bunda"
   },
   {
-    src: "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2016/12/13/17/30/fashion-design-1904690_1280.jpg",
     alt: "Doplňky"
   },
   {
-    src: "https://images.unsplash.com/photo-1533077163758-16c6a2f370b6?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2017/01/26/00/46/model-2009477_1280.jpg",
     alt: "Taška"
+  },
+  {
+    src: "https://cdn.pixabay.com/photo/2016/11/01/23/38/bandana-1790048_1280.jpg",
+    alt: "Pes"
+  },
+  {
+    src: "https://cdn.pixabay.com/photo/2025/03/12/09/55/fashion-9464759_1280.jpg",
+    alt: "Žena"
   },
   {
     src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80",
@@ -30,15 +38,15 @@ const images = [
     alt: "Módní doplňky"
   },
   {
-    src: "https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2020/01/09/15/11/pomeranian-4753033_1280.jpg",
     alt: "Stylový outfit"
   },
   {
-    src: "https://images.unsplash.com/photo-1542060748-10c28b62716b?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2019/10/31/18/31/dog-4592541_1280.jpg",
     alt: "Sluneční brýle"
   },
   {
-    src: "https://images.unsplash.com/photo-1570651751145-2a3c1b2a5078?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2019/09/16/09/30/alone-4480442_1280.jpg",
     alt: "Šperky"
   },
   {
@@ -46,7 +54,7 @@ const images = [
     alt: "Hodinky"
   },
   {
-    src: "https://images.unsplash.com/photo-1555529669-e69b8b8b3c34?auto=format&fit=crop&w=600&q=80",
+    src: "https://cdn.pixabay.com/photo/2019/09/16/09/29/alone-4480437_1280.jpg",
     alt: "Čepice"
   }
 ];
@@ -56,6 +64,8 @@ const images = [
 
 function ImageGrid() {
   return (
+    <>
+    <h2>Galerie</h2>
     <div className="image-grid">
       {images.map((img, index) => (
         <div
@@ -66,6 +76,7 @@ function ImageGrid() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 

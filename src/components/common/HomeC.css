@@ -1,6 +1,10 @@
-/* HomeC.css */
+/* Globální styl kontejneru */
+.home-container {
+  padding: 2rem 1rem;
+}
+
+/* Nadpisy */
 h1, h2 {
-  color: white;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin-bottom: 0.5rem;
@@ -19,6 +23,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* Běžné odstavce */
 p {
   max-width: 700px;
   margin: 0 auto 1.5rem;
@@ -26,5 +31,69 @@ p {
   line-height: 1.6;
   color: #eee;
   text-align: center;
-  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Sekce s články */
+.articles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+/* Jednotlivý článek */
+article {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Nadpis v článku */
+article h3 {
+  color: #f97316;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* Text v článku */
+article p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+/* Styl odkazu na produkty */
+.custom-link {
+  display: block;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  margin: 1.5rem auto 0;
+  max-width: 220px;
+  text-align: center;
+}
+
+.custom-link:hover,
+.custom-link:focus {
+  border-color: #f97316;
+  color: #f97316;
+  outline: none;
 }

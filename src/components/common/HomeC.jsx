@@ -1,5 +1,7 @@
 import { useLocalization } from "../../contexts/LocalizationContext";
 import "./HomeC.css";
+import { Link } from "react-router-dom";
+
 function HomeC() {
   const { strings } = useLocalization();
   return (
