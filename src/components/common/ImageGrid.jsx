@@ -64,6 +64,8 @@ const images = [
 
 function ImageGrid() {
   return (
+    <>
+    <h2>Galerie</h2>
     <div className="image-grid">
       {images.map((img, index) => (
         <div
@@ -74,6 +76,7 @@ function ImageGrid() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
