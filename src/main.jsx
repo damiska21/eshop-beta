@@ -5,18 +5,21 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext.jsx";
 import { RatingProvider } from "./contexts/RatingContext.jsx";
+import { LocalizationProvider } from "./contexts/LocalizationContext";
 import "bootstrap/dist/css/bootstrap.css";
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <CartProvider>
-      <RatingProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <App />
-      </BrowserRouter>
-      </RatingProvider>
-    </CartProvider>
+    <LocalizationProvider>
+      <CartProvider>
+        <RatingProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <App />
+          </BrowserRouter>
+        </RatingProvider>
+      </CartProvider>
+    </LocalizationProvider>
   </StrictMode>
 );

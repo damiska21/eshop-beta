@@ -3,48 +3,55 @@ import "./Product.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 import { RatingContext } from "../../contexts/RatingContext";
+import { useLocalization } from "../../contexts/LocalizationContext";
 
 function Product({ id, title, description, image, price }) {
   const { addToCart } = useCart();
+  const { strings } = useLocalization();
   const { ratings, updateRating } = useContext(RatingContext);
 
   const rating = ratings[id] || { rate: 0, count: 0 };
 
   const renderStars = () => {
-  const fullStars = Math.floor(rating.rate);
-  const hasHalfStar = rating.rate % 1 >= 0.5;
-  const totalStars = 5;
+    const fullStars = Math.floor(rating.rate);
+    const hasHalfStar = rating.rate % 1 >= 0.5;
+    const totalStars = 5;
 
-  return (
-    <div className="star-rating interactive">
-      {[...Array(totalStars)].map((_, i) => {
-        const starValue = totalStars - i; // 5,4,3,2,1
-        let starClass = "star";
-        if (starValue <= fullStars) starClass += " filled";
-        else if (starValue === fullStars + 1 && hasHalfStar) starClass += " half";
+    return (
+      <div className="star-rating interactive">
+        {[...Array(totalStars)].map((_, i) => {
+          const starValue = totalStars - i; // 5,4,3,2,1
+          let starClass = "star";
+          if (starValue <= fullStars) starClass += " filled";
+          else if (starValue === fullStars + 1 && hasHalfStar)
+            starClass += " half";
 
-        return (
-          <span
-            key={starValue}
-            className={starClass}
-            onClick={(e) => {
-              e.preventDefault();
-              updateRating(id, starValue);
-            }}
-            style={{ cursor: "pointer" }}
-            title={`Hodnotit ${starValue} hvězdiček`}
-          >
-            ★
-          </span>
-        );
-      })}
-      <span className="rating-number">
-        ({rating.rate.toFixed(1)} z {rating.count} hlasů)
-      </span>
-    </div>
-  );
-};
-
+          return (
+            <span
+              key={starValue}
+              className={starClass}
+              onClick={(e) => {
+                e.preventDefault();
+                updateRating(id, starValue);
+              }}
+              style={{ cursor: "pointer" }}
+              title={
+                strings.products.rating.ratepopup1 +
+                starValue +
+                strings.products.rating.ratepopup2
+              }
+            >
+              ★
+            </span>
+          );
+        })}
+        <span className="rating-number">
+          ({rating.rate.toFixed(1)} {strings.products.rating.from}{" "}
+          {rating.count} {strings.products.rating.votes})
+        </span>
+      </div>
+    );
+  };
 
   return (
     <div className="product-card">
@@ -64,7 +71,7 @@ function Product({ id, title, description, image, price }) {
           addToCart(id);
         }}
       >
-        Přidat do košíku
+        {strings.products.addtocart}
       </button>
     </div>
   );

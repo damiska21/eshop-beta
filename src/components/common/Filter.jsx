@@ -1,5 +1,6 @@
 import React from "react";
 import "./Filter.css";
+import { useLocalization } from "../../contexts/LocalizationContext";
 
 function Filter({
   categories,
@@ -12,10 +13,11 @@ function Filter({
   onReset,
   onClose,
 }) {
+  const { strings } = useLocalization();
   return (
     <div className="filter">
       <div className="filter-header">
-        <h3>Filtrovat produkty</h3>
+        <h3>{strings.products.filter.title}</h3>
         <button
           className="filter-close-button"
           onClick={onClose}
@@ -26,13 +28,13 @@ function Filter({
       </div>
 
       <label>
-        Kategorie
+        {strings.products.filter.category}
         <select
           className="filter-select"
           value={selectedCategory}
           onChange={(e) => onCategoryChange(e.target.value)}
         >
-          <option value="">Vše</option>
+          <option value="">{strings.products.filter.all}</option>
           {categories.map((cat) => (
             <option key={cat} value={cat}>
               {cat}
@@ -42,7 +44,7 @@ function Filter({
       </label>
 
       <label>
-        Cena od
+        {strings.products.filter.pricefrom}
         <input
           type="number"
           className="filter-input"
@@ -55,7 +57,7 @@ function Filter({
       </label>
 
       <label>
-        Cena do
+        {strings.products.filter.priceto}
         <input
           type="number"
           className="filter-input"
@@ -68,22 +70,22 @@ function Filter({
       </label>
 
       <label>
-        Řazení
+        {strings.products.filter.sorting}
         <select
           className="filter-select"
           value={sort}
           onChange={(e) => onSortChange(e.target.value)}
         >
-          <option value="">Žádné</option>
-          <option value="price-asc">Cena vzestupně</option>
-          <option value="price-desc">Cena sestupně</option>
-          <option value="name-asc">Název A-Z</option>
-          <option value="name-desc">Název Z-A</option>
+          <option value="">{strings.products.filter.none}</option>
+          <option value="price-asc">{strings.products.filter.priceasc}</option>
+          <option value="price-desc">{strings.products.filter.pricedes}</option>
+          <option value="name-asc">{strings.products.filter.az}</option>
+          <option value="name-desc">{strings.products.filter.za}</option>
         </select>
       </label>
 
       <button className="reset-button" onClick={onReset}>
-        Resetovat filtry
+        {strings.products.filter.reset}
       </button>
     </div>
   );

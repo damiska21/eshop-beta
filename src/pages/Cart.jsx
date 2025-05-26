@@ -1,8 +1,10 @@
 import { useCart } from "../contexts/CartContext";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Cart.css";
+import { useLocalization } from "../contexts/LocalizationContext";
 
 export default function Cart() {
+  const { strings } = useLocalization();
   const { cart, price, updateQuantity, removeFromCart, clearCart } = useCart();
   const [cartProducts, setCartProducts] = useState([]);
 
@@ -26,27 +28,29 @@ export default function Cart() {
   }, [cart]);
 
   if (cart.length === 0) {
-    return <p className="prazdny">Košík je prázdný 😢</p>;
+    return <p className="prazdny">{strings.cart.empty}</p>;
   }
 
   return (
     <div className="cart-container">
-      <h1>Košík</h1>
+      <h1>{strings.cart.title}</h1>
       <table className="cart-table">
         <thead>
           <tr>
-            <th>Obrázek</th>
-            <th>Název</th>
-            <th>Cena</th>
-            <th>Množství</th>
-            <th>Celkem</th>
+            <th>{strings.cart.image}</th>
+            <th>{strings.cart.name}</th>
+            <th>{strings.cart.price}</th>
+            <th>{strings.cart.amount}</th>
+            <th>{strings.cart.total}</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           {cartProducts.map((product) => (
             <tr key={product.id}>
-              <td><img src={product.image} alt={product.title} /></td>
+              <td>
+                <img src={product.image} alt={product.title} />
+              </td>
               <td>{product.title}</td>
               <td>{product.price.toFixed(2)} Kč</td>
               <td>
@@ -68,7 +72,7 @@ export default function Cart() {
           ))}
           <tr className="cart-total-row">
             <td colSpan="4" style={{ textAlign: "right", fontWeight: "bold" }}>
-              Celkem
+              {strings.cart.total}
             </td>
             <td style={{ fontWeight: "bold" }}>{price.toFixed(2)} Kč</td>
             <td></td>
@@ -77,10 +81,12 @@ export default function Cart() {
       </table>
 
       <div className="todo-section">
-        <button onClick={clearCart} style={{ padding: "8px 12px", cursor: "pointer" }}>
-          🧹 Vymazat celý košík
+        <button
+          onClick={clearCart}
+          style={{ padding: "8px 12px", cursor: "pointer" }}
+        >
+          {strings.cart.delete}
         </button>
-        <p>💳 Checkout?</p>
       </div>
     </div>
   );

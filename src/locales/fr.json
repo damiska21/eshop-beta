@@ -1,0 +1,8 @@
+{
+    "nav":{
+        "home": "Accueil",
+        "products": "Produits",
+        "contact": "Nous Contacter",
+        "search": "Cherche le produit ..."
+    }
+}

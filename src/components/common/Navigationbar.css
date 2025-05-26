@@ -55,6 +55,29 @@
   color: #f97316 !important;
 }
 
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.lang-switcher button {
+  background: none;
+  border: 1px solid #aaa;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lang-switcher button.active-lang {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: black;
+}
+
 /* Hamburger styl od 992px dolů (přibližně 900px) */
 @media (max-width: 992px) {
   .navbar-inner {
@@ -74,5 +97,3 @@
     justify-content: space-between;
   }
 }
-
-

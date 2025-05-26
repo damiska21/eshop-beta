@@ -1,19 +1,21 @@
 import { useState } from "react";
-import "./Form.css"
+import "./Form.css";
+import { useLocalization } from "../../contexts/LocalizationContext";
 
 function Form() {
+  const { strings } = useLocalization();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError(""); 
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setError("");
   };
 
   const isValidEmail = (email) => {
@@ -27,17 +29,17 @@ function Form() {
     const { name, email, message } = formData;
 
     if (!name || !email || !message) {
-      setError("Vyplň prosím všechna pole.");
+      setError(strings.contact.popup.fieldempty);
       return;
     }
 
     if (!isValidEmail(email)) {
-      setError("Zadej platnou e-mailovou adresu.");
+      setError(strings.contact.popup.emailinvalid);
       return;
     }
 
     console.log("Odesláno:", formData);
-    alert("Zpráva odeslána!");
+    alert(strings.contact.popup.messagesent);
     setFormData({ name: "", email: "", message: "" }); // reset formuláře
   };
 
@@ -46,20 +48,23 @@ function Form() {
       {error && <div className="alert alert-danger">{error}</div>}
 
       <div className="mb-3">
-        <label htmlFor="name" className="form-label">Jméno</label>
+        <label htmlFor="name" className="form-label">
+          {strings.contact.name}
+        </label>
         <input
           type="text"
           className="form-control"
           id="name"
           name="name"
-          placeholder="Tvé jméno"
           value={formData.name}
           onChange={handleChange}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">Emailová adresa</label>
+        <label htmlFor="email" className="form-label">
+          {strings.contact.email}
+        </label>
         <input
           type="email"
           className="form-control"
@@ -72,19 +77,22 @@ function Form() {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="message" className="form-label">Zpráva</label>
+        <label htmlFor="message" className="form-label">
+          {strings.contact.text}
+        </label>
         <textarea
           className="form-control"
           id="message"
           name="message"
           rows="4"
-          placeholder="Napiš svou zprávu..."
           value={formData.message}
           onChange={handleChange}
         />
       </div>
 
-      <button type="submit" className="btn btn-primary">Odeslat</button>
+      <button type="submit" className="btn btn-primary">
+        {strings.contact.send}
+      </button>
     </form>
   );
 }

@@ -1,0 +1,75 @@
+{
+    "nav":{
+        "home": "Home",
+        "products": "Products",
+        "contact": "Contact us",
+        "search": "Search products ..."
+    },
+    "footer":{
+        "contact":"Contact",
+        "email":"Email: info@eshop.cz",
+        "phone":"Phone: +420 123 456 789",
+        "adress":"Adress: Prague 1, Czech Republic",
+        "links":"Links",
+        "aboutus":"About us",
+        "termsconditions":"Terms and conditions",
+        "privacypolicy":"Privacy policy"
+    },
+    "home":{
+        "h1":"Welcome to the Beta team E-shop",
+        "h2":"About us",
+        "text1":"We are a team of passionate professionals, who focus on the creation of a quality internet shop, where you will find a wide range of products at great prices. Our goal is to ensure a comfortable and safe shopping environment with quick delivery.",
+        "text2": "We care about the happiness of our customers, that's why we are constantly improving our services and adding new features to ease your shopping experience."
+    },
+    "products":{
+        "title":"Products",
+        "searching":"results",
+        "rating":{
+            "votes":"votes",
+            "from":"from",
+            "ratepopup1":"Rate ",
+            "ratepopup2":" stars"
+        },
+        "filter":{
+            "show":"Show filter",
+            "title":"Filter products",
+            "category":"Category",
+            "pricefrom":"Price from",
+            "priceto":"Price to",
+            "sorting":"Sorting",
+            "all":"All",
+            "none":"None",
+            "priceasc":"Price ascending",
+            "pricedes":"Price descending",
+            "az":"Name from A to Z",
+            "za":"Name from Z to A",
+            "reset":"Reset filters"
+        },
+        "addtocart":"Add to cart"
+    },
+    "contact":{
+        "title":"Contacts",
+        "coworkers":"Workers",
+        "hover":"Hover to find me",
+        "formtitle":"Contact us",
+        "name":"Name",
+        "email":"Email adress",
+        "text":"Message",
+        "send":"Send",
+        "popup":{
+            "fieldempty":"Please fill out all fields",
+            "emailinvalid":"Please enter a valid email adress",
+            "messagesent":"Message sent!"
+        }
+    },
+    "cart":{
+        "title":"Cart",
+        "image":"Image",
+        "name":"Name",
+        "price":"Price",
+        "amount":"Amount",
+        "total":"Total",
+        "delete":"Empty whole cart",
+        "empty":"Cart is empty"
+    }
+}

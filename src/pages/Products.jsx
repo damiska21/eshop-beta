@@ -4,8 +4,11 @@ import Loader from "../components/common/Loader.jsx";
 import Filter from "../components/common/Filter.jsx";
 import "./Products.css";
 import { useSearchParams } from "react-router-dom";
+import { useLocalization } from "../contexts/LocalizationContext.jsx";
 
 export default function Products() {
+  const { strings } = useLocalization();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("filter") ?? "";
 
@@ -95,12 +98,12 @@ export default function Products() {
   if (!filteredProducts) return <Loader />;
   return (
     <>
-      <h1>Produkty</h1>
-      {query.split(";").length != 1 && <h1>vyhledávání</h1>}
+      <h1>{strings.products.title}</h1>
+      {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
       {!isFilterVisible && (
         <div className="filter-toggle-container">
           <button className="filter-show-button" onClick={toggleFilter}>
-            Zobrazit filtr
+            {strings.products.filter.show}
           </button>
         </div>
       )}

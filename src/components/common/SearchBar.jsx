@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 import { useNavigate } from "react-router-dom";
+import { useLocalization } from "../../contexts/LocalizationContext";
 
 export default function SearchBar() {
+  const { strings } = useLocalization();
+
   const inputField = useRef(null);
   var jsonData;
   const [jsonDataState, setJsonData] = useState();
@@ -43,7 +46,7 @@ export default function SearchBar() {
         type="text"
         ref={inputField}
         className="search-bar"
-        placeholder="Vyhledejte produkt ..."
+        placeholder={strings.nav.search}
       />
       <button type="submit" className="search-button">
         <FaSearch className="search-icon" />

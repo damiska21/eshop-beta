@@ -1,0 +1,75 @@
+{
+    "nav":{
+        "home": "Domů",
+        "products": "Produkty",
+        "contact": "Kontaktujte nás",
+        "search": "Vyhledejte produkt ..."
+    },
+    "footer":{
+        "contact":"Kontakt",
+        "email":"Email: info@eshop.cz",
+        "phone":"Telefon: +420 123 456 789",
+        "adress":"Adresa: Praha 1, Česká republika",
+        "links":"Odkazy",
+        "aboutus":"O nás",
+        "termsconditions":"Obchodní podmínky",
+        "privacypolicy":"Zásady ochrany osobních údajů"
+    },
+    "home":{
+        "h1":"Vítejte v E-shopu týmu Beta",
+        "h2":"O nás",
+        "text1":"Jsme tým nadšených odborníků, kteří se věnují tvorbě kvalitního e-shopu, kde najdete široký výběr produktů za skvělé ceny. Naším cílem je zajistit vám pohodlný a bezpečný nákup s rychlým doručením.",
+        "text2": "Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a přidáváme nové funkce, které vám usnadní výběr a nákup."
+    },
+    "products":{
+        "title":"Produkty",
+        "searching":"vyhledávání",
+        "rating":{
+            "votes":"hlasů",
+            "from":"z",
+            "ratepopup1":"Hodnotit ",
+            "ratepopup2":" hvězdiček"
+        },
+        "filter":{
+            "show":"Zobrazit filtr",
+            "title":"Filtrovat produkty",
+            "category":"Kategorie",
+            "pricefrom":"Cena od",
+            "priceto":"Cena do",
+            "sorting":"Řazení",
+            "all":"Vše",
+            "none":"Žádné",
+            "priceasc":"Cena vzestupně",
+            "pricedes":"Cena sestupně",
+            "az":"Název A až Z",
+            "za":"Název Z až A",
+            "reset":"Resetovat filtry"
+        },
+        "addtocart":"Přidat do košíku"
+    },
+    "contact":{
+        "title":"Kontakt",
+        "coworkers":"Pracovníci",
+        "hover":"Přejeď myší pro odkazy",
+        "formtitle":"Kontaktujte nás",
+        "name":"Jméno",
+        "email":"Emailová adresa",
+        "text":"Zpráva",
+        "send":"Odeslat",
+        "popup":{
+            "fieldempty":"Vyplň prosím všechna pole.",
+            "emailinvalid":"Zadej platnou e-mailovou adresu.",
+            "messagesent":"Zpráva odeslána!"
+        }
+    },
+    "cart":{
+        "title":"Košík",
+        "image":"Obrázek",
+        "name":"Název",
+        "price":"Cena",
+        "amount":"Množství",
+        "total":"Celkem",
+        "delete":"Vyprázdnit celý košík",
+        "empty":"Košík je prázdný"
+    }
+}

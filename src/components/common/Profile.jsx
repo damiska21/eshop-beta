@@ -1,6 +1,8 @@
+import { useLocalization } from "../../contexts/LocalizationContext";
 import "./Profile.css";
 
 function Profile({ name, location, imgUrl, bgUrl, links }) {
+  const { strings } = useLocalization();
   return (
     <div className="flip-card">
       <div className="flip-inner">
@@ -18,7 +20,7 @@ function Profile({ name, location, imgUrl, bgUrl, links }) {
             <p className="flip-location">
               <i className="fas fa-map-marker-alt icon"></i> {location}
             </p>
-            <span className="flip-hover-hint">Hover to Find Me</span>
+            <span className="flip-hover-hint">{strings.contact.hover}</span>
           </div>
         </div>
         <div className="flip-back">
