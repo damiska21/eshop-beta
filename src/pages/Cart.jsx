@@ -2,6 +2,7 @@ import { useCart } from "../contexts/CartContext";
 import { useState, useEffect } from "react";
 import "./Cart.css";
 import { useLocalization } from "../contexts/LocalizationContext";
+import PageWrapper from "../components/uncommon/PageWrapper";
 
 export default function Cart() {
   const { strings } = useLocalization();
@@ -28,10 +29,12 @@ export default function Cart() {
   }, [cart]);
 
   if (cart.length === 0) {
-    return <p className="prazdny">{strings.cart.empty}</p>;
+    return <> <PageWrapper><p className="prazdny">{strings.cart.empty}</p> </PageWrapper> </> ;
   }
 
   return (
+    <>
+    <PageWrapper>
     <div className="cart-container">
       <h1>{strings.cart.title}</h1>
       <table className="cart-table">
@@ -89,5 +92,7 @@ export default function Cart() {
         </button>
       </div>
     </div>
+    </PageWrapper>
+    </>
   );
 }

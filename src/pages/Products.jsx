@@ -5,6 +5,7 @@ import Filter from "../components/common/Filter.jsx";
 import "./Products.css";
 import { useSearchParams } from "react-router-dom";
 import { useLocalization } from "../contexts/LocalizationContext.jsx";
+import PageWrapper from "../components/uncommon/PageWrapper.jsx";
 
 export default function Products() {
   const { strings } = useLocalization();
@@ -98,6 +99,7 @@ export default function Products() {
   if (!filteredProducts) return <Loader />;
   return (
     <>
+    <PageWrapper>
       <h1>{strings.products.title}</h1>
       {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
       {!isFilterVisible && (
@@ -145,6 +147,7 @@ export default function Products() {
           ))}
         </div>
       </div>
+      </PageWrapper>
     </>
   );
 }

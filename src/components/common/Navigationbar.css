@@ -10,10 +10,20 @@
 .navbar-inner {
   padding: 0.5rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* místo space-between */
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem; /* volitelné – odděluje levou a pravou část */
 }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-left: 2rem; /* posune doprava blíže k logu */
+}
+
 
 .navbar-header {
   display: flex;
@@ -44,17 +54,6 @@
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
-.custom-nav-link {
-  color: white !important;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.custom-nav-link:hover {
-  color: #f97316 !important;
-}
-
 .lang-switcher {
   display: flex;
   gap: 0.5rem;
@@ -64,18 +63,31 @@
 
 .lang-switcher button {
   background: none;
-  border: 1px solid #aaa;
+  border: 1px solid white;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   color: white;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.2s ease;
 }
 
+.lang-switcher button:hover,
 .lang-switcher button.active-lang {
   background-color: #f97316;
   border-color: #f97316;
   color: black;
+}
+
+
+.custom-nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.custom-nav-link:hover {
+  color: #f97316 !important;
 }
 
 /* Hamburger styl od 992px dolů (přibližně 900px) */
@@ -97,3 +109,5 @@
     justify-content: space-between;
   }
 }
+
+

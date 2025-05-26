@@ -6,6 +6,7 @@ import { useCart } from "../contexts/CartContext.jsx";
 import { RatingContext } from "../contexts/RatingContext";
 import React from "react";
 import { useLocalization } from "../contexts/LocalizationContext.jsx";
+import PageWrapper from "../components/uncommon/PageWrapper.jsx";
 
 export default function ProductDetail() {
   const { strings } = useLocalization();
@@ -72,6 +73,8 @@ export default function ProductDetail() {
   if (!product) return <Loader />;
 
   return (
+    <>
+    <PageWrapper>
     <div className="product-detail">
       <h1>{product.title}</h1>
       <img src={product.image} alt={product.title} className="product-image" />
@@ -86,5 +89,7 @@ export default function ProductDetail() {
         </button>
       </div>
     </div>
+    </PageWrapper>
+    </>
   );
 }
