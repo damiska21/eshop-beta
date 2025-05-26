@@ -1,0 +1,10 @@
+.ms-auto {
+    flex-wrap: nowrap;
+  }
+  
+  .navbar-nav{
+    --bs-nav-link-hover-color:#f97316 !important;
+  }
+  span{
+    --bs-navbar-brand-color:#f97316 !important;
+  }

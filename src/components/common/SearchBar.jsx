@@ -38,7 +38,7 @@ export default function SearchBar() {
     navigate(`/products?filter=${sendingIds}`);
   }
   return (
-    <form className="wrapper nav-center" onSubmit={handleClick}>
+    <form className="wrapper" onSubmit={handleClick}>
       <input
         type="text"
         ref={inputField}

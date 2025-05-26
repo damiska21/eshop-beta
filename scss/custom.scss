@@ -1,0 +1,12 @@
+$body-bg: #1e1e1e;
+$body-color: #ffffff;
+
+$theme-colors: (
+  "primary": #f97316,
+  "secondary": #cccccc,
+  "dark": #1e1e1e,
+  "light": #ffffff,
+);
+
+// Pak import Bootstrapu
+@import "bootstrap";
