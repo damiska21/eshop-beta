@@ -3,15 +3,11 @@ import Product from "../components/common/Product.jsx";
 import Loader from "../components/common/Loader.jsx";
 import Filter from "../components/common/Filter.jsx";
 import "./Products.css";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export default function Products() {
-  const [products, setProducts] = useState(null);
-  const [filter, setFilter] = useState([]);
-
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("filter") ?? "";
-  const [mapped, setMapped] = useState(() => ""); //ukládáme celou db
 
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState(null);
@@ -30,54 +26,11 @@ export default function Products() {
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
+        //získání všech kategorií bez duplikátů
         setCategories([...new Set(data.map((item) => item.category))]);
         setFilteredProducts(data);
       });
   }, []);
-
-  useEffect(() => {
-    console.log(mapped);
-    if (mapped != "") {
-      pullData("");
-    }
-  }, [query]);
-
-  useEffect(() => {
-    // Reset filtrů
-    const resetFilters = () => {
-      setSelectedCategory("");
-      setPriceRange({ min: "", max: "" });
-      setSort("");
-    };
-
-    // Přepínání viditelnosti filtru
-    const toggleFilter = () => setIsFilterVisible((prev) => !prev);
-
-    // Filtrování a řazení produktů
-  }, []);
-
-  function pullData(json) {
-    const batchId = Math.random();
-    const mapped = json.map((item, i) => (
-      <Product
-        key={item.id + batchId}
-        id={item.id}
-        title={item.title}
-        description={item.description}
-        image={item.image}
-        price={item.price}
-      />
-    ));
-    let exporting = [];
-
-    //pokud je item ve filteru nebo pokud je filter prázdný zobrazit produkt
-    mapped.forEach((element) => {
-      if (filter.includes(element.props.id) || filter.length === 0) {
-        exporting.push(element);
-      }
-    });
-    setProducts(exporting);
-  }
 
   // Reset filtrů
 
@@ -87,6 +40,8 @@ export default function Products() {
     setPriceRange({ min: "", max: "" });
 
     setSort("");
+
+    setSearchParams({ filter: "0" });
   };
 
   // Přepínání viditelnosti filtru
@@ -97,6 +52,20 @@ export default function Products() {
 
   useEffect(() => {
     let filtered = [...allProducts];
+
+    const filter = query.split(";");
+    if (filter.length != 1) {
+      var exporting = [];
+      filtered.forEach((element) => {
+        if (
+          filter.includes(element.id.toString()) ||
+          (filter.length === 1 && filter[0] == "")
+        ) {
+          exporting.push(element);
+        }
+      });
+      filtered = exporting;
+    }
 
     if (selectedCategory) {
       filtered = filtered.filter((p) => p.category === selectedCategory);
@@ -119,14 +88,15 @@ export default function Products() {
     } else if (sort === "name-desc") {
       filtered.sort((a, b) => b.title.localeCompare(a.title));
     }
+
     setFilteredProducts(filtered);
-  }, [allProducts, selectedCategory, priceRange, sort]);
+  }, [allProducts, selectedCategory, priceRange, sort, query]);
 
   if (!filteredProducts) return <Loader />;
   return (
     <>
       <h1>Produkty</h1>
-      <div className="products">{products}</div>
+      {query.split(";").length != 1 && <h1>vyhledávání</h1>}
       {!isFilterVisible && (
         <div className="filter-toggle-container">
           <button className="filter-show-button" onClick={toggleFilter}>
