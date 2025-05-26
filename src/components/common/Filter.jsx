@@ -1,5 +1,5 @@
 import React from "react";
-import "./Filter.css"; // Pokud máš oddělený styl, jinak je vše v Products.css
+import "./Filter.css";
 
 function Filter({
   categories,
@@ -10,13 +10,17 @@ function Filter({
   sort,
   onSortChange,
   onReset,
-  onClose
+  onClose,
 }) {
   return (
     <div className="filter">
       <div className="filter-header">
         <h3>Filtrovat produkty</h3>
-        <button className="filter-close-button" onClick={onClose} aria-label="Zavřít filtr">
+        <button
+          className="filter-close-button"
+          onClick={onClose}
+          aria-label="Zavřít filtr"
+        >
           ×
         </button>
       </div>
@@ -43,7 +47,9 @@ function Filter({
           type="number"
           className="filter-input"
           value={priceRange.min}
-          onChange={(e) => onPriceChange({ ...priceRange, min: e.target.value })}
+          onChange={(e) =>
+            onPriceChange({ ...priceRange, min: e.target.value })
+          }
           min="0"
         />
       </label>
@@ -54,7 +60,9 @@ function Filter({
           type="number"
           className="filter-input"
           value={priceRange.max}
-          onChange={(e) => onPriceChange({ ...priceRange, max: e.target.value })}
+          onChange={(e) =>
+            onPriceChange({ ...priceRange, max: e.target.value })
+          }
           min="0"
         />
       </label>
