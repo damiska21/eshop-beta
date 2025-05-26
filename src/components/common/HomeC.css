@@ -28,3 +28,31 @@ p {
   text-align: center;
   text-shadow: 0 0 2px rgba(0,0,0,0.4);
 }
+
+/* HomeC.css */
+.custom-link {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #ffffff; /* oranžová barva textu */
+  font-weight: 700;
+  border: 2px solid #ffffff; /* oranžový rámeček */
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  display: block;
+  max-width: 220px;
+}
+
+.custom-link:hover,
+.custom-link:focus {
+  border: 2px solid #f97316;/* oranžová výplň */
+  color: #f97316; /* bílý text */
+  outline: none;
+}
+
+

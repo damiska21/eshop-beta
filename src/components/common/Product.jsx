@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 import { RatingContext } from "../../contexts/RatingContext";
 
+
 function Product({ id, title, description, image, price }) {
   const { addToCart } = useCart();
   const { ratings, updateRating } = useContext(RatingContext);

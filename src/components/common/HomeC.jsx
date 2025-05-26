@@ -1,4 +1,6 @@
 import "./HomeC.css"
+import { Link } from "react-router-dom";
+
 function HomeC() {
   return (
     <>
@@ -13,8 +15,14 @@ function HomeC() {
         Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a
         přidáváme nové funkce, které vám usnadní výběr a nákup.
       </p>
+
+    
+      <Link to="/products" className="custom-link">
+        Jdeme nakupovat!!!
+      </Link>
     </>
   );
 }
 
 export default HomeC;
+
