@@ -1,10 +1,76 @@
-.ms-auto {
-    flex-wrap: nowrap;
+.custom-navbar {
+  background-color: #1e1e1e;
+  color: white;
+  border-bottom: 2px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-inner {
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo */
+.brand-link {
+  text-decoration: none;
+  color: white !important;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  color: #f97316;
+  font-size: 25px;
+}
+
+/* Odkazy */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.custom-nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.custom-nav-link:hover {
+  color: #f97316 !important;
+}
+
+/* Hamburger styl od 992px dolů (přibližně 900px) */
+@media (max-width: 992px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .navbar-nav{
-    --bs-nav-link-hover-color:#f97316 !important;
+
+  .nav-right {
+    flex-direction: column;
+    align-items: center; /* zarovná odkazy doprostřed */
+    gap: 1rem;
+    padding: 1rem 0;
   }
-  span{
-    --bs-navbar-brand-color:#f97316 !important;
+
+  .navbar-header {
+    width: 100%;
+    justify-content: space-between;
   }
+}

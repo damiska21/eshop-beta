@@ -13,7 +13,7 @@ function Form() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    setError(""); // vymaže chybu při novém psaní
+    setError(""); 
   };
 
   const isValidEmail = (email) => {
