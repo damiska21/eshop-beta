@@ -134,7 +134,7 @@
 @media (min-width: 1025px) {
   .filter {
     position: fixed;
-    top: 85px;
+    top: 92px;
     left: 0;
     height: 100vh;
     width: 300px;
@@ -173,7 +173,7 @@
 
   .filter {
     position: fixed;
-    top: 85px;
+    top: 92px;
     left: 0;
     height: 100vh;
     width: 80vw;

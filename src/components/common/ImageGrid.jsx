@@ -32,8 +32,25 @@ const images = [
   {
     src: "https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=600&q=80",
     alt: "Stylový outfit"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542060748-10c28b62716b?auto=format&fit=crop&w=600&q=80",
+    alt: "Sluneční brýle"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1570651751145-2a3c1b2a5078?auto=format&fit=crop&w=600&q=80",
+    alt: "Šperky"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+    alt: "Hodinky"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1555529669-e69b8b8b3c34?auto=format&fit=crop&w=600&q=80",
+    alt: "Čepice"
   }
 ];
+
 
 
 

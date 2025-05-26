@@ -79,3 +79,75 @@
 .card-button:hover {
   background-color: #ea640f;
 }
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.4rem; /* trochu větší hvězdy */
+  color: #999;
+  user-select: none;
+}
+
+.star-rating.interactive {
+  display: flex;
+  flex-direction: row-reverse; /* 1..5 zleva doprava */
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.star-rating .star {
+  color: #999;
+  transition: color 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.star-rating .star.filled {
+  color: #f97316; /* oranžová */
+}
+
+.star-rating .star.half {
+  position: relative;
+  color: #f97316;
+}
+
+.star-rating .star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f97316;
+}
+
+/* Hover efekt: zvýrazní hvězdy a trochu je zvětší */
+.star-rating.interactive .star:hover,
+.star-rating.interactive .star:hover ~ .star {
+  color: #f97316cc; /* poloprůhledná oranžová */
+  transform: scale(1.2);
+  transition: color 0.3s ease, transform 0.15s ease;
+}
+
+/* Když najedeš na hvězdu, zbývající mají mírně sníženou neprůhlednost */
+.star-rating.interactive:hover .star {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.star-rating.interactive .star:hover,
+.star-rating.interactive .star:hover ~ .star {
+  opacity: 1;
+}
+
+/* Počet hlasů trochu oddělíme a zvětšíme */
+.star-rating .rating-number {
+  margin-left: 0.8rem;
+  font-size: 1rem;
+  color: #bbb;
+  user-select: none;
+  white-space: nowrap;
+}
+
+
+
+

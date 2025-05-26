@@ -60,3 +60,63 @@
   background-color: #fb923c; /* světlejší oranžová při hoveru */
   transform: scale(1.05);
 }
+
+.star-rating.interactive {
+  display: flex;
+  flex-direction: row-reverse; /* otočí hvězdy tak, aby byly vizuálně 1..5 zleva doprava */
+  gap: 0.25rem;
+  font-size: 1.4rem;
+  color: #999;
+  user-select: none;
+  cursor: pointer;
+}
+
+.star-rating .star {
+  color: #999;
+  transition: color 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.star-rating .star.filled {
+  color: #f97316; /* oranžová */
+}
+
+.star-rating .star.half {
+  position: relative;
+  color: #f97316;
+}
+
+.star-rating .star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f97316;
+}
+
+.star-rating.interactive .star:hover,
+.star-rating.interactive .star:hover ~ .star {
+  color: #f97316cc;
+  transform: scale(1.2);
+  transition: color 0.3s ease, transform 0.15s ease;
+}
+
+.star-rating.interactive:hover .star {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.star-rating.interactive .star:hover,
+.star-rating.interactive .star:hover ~ .star {
+  opacity: 1;
+}
+
+.star-rating .rating-number {
+  margin-left: 0.8rem;
+  font-size: 1rem;
+  color: #bbb;
+  user-select: none;
+  white-space: nowrap;
+}
+
