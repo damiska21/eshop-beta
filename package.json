@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:api": "openapi-generator-cli generate -i fakestoreapi.json -g javascript -o src/api"
   },
   "dependencies": {
     "bootstrap": "^5.3.6",
@@ -16,10 +17,12 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-localization": "^2.0.6",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "superagent": "^10.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@openapitools/openapi-generator-cli": "^2.20.2",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
