@@ -30,7 +30,11 @@ export default function Navigationbar() {
               <FaFireAlt className="logo-icon" />
               Beta
             </Navbar.Brand>
-            <Navbar.Toggle ref={navRef} aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle
+              ref={navRef}
+              aria-controls="basic-navbar-nav"
+              className="bg-primary"
+            />
           </div>
 
           <Navbar.Collapse id="basic-navbar-nav">
