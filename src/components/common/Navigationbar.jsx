@@ -6,13 +6,20 @@ import SearchBar from "./SearchBar";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "./Navigationbar.css";
 import strings from "../../utils/localization";
-import { useState } from "react";
+import { useRef } from "react";
 
 import { useLocalization } from "../../contexts/LocalizationContext";
 
 export default function Navigationbar() {
   const { price } = useCart();
   const { strings, language, setLanguage } = useLocalization();
+
+  const navRef = useRef();
+
+  const close = () => {
+    console.log(navRef.current);
+    navRef.current?.click();
+  };
 
   return (
     <>
@@ -23,7 +30,7 @@ export default function Navigationbar() {
               <FaFireAlt className="logo-icon" />
               Beta
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle ref={navRef} aria-controls="basic-navbar-nav" />
           </div>
 
           <Navbar.Collapse id="basic-navbar-nav">
@@ -32,34 +39,63 @@ export default function Navigationbar() {
               {/* 🌐 Jazykový přepínač */}
               <div className="lang-switcher">
                 <button
-                  onClick={() => setLanguage("cz")}
+                  onClick={() => {
+                    setLanguage("cz");
+                    close();
+                  }}
                   className={language === "cz" ? "active-lang" : ""}
                 >
                   CZ
                 </button>
                 <button
-                  onClick={() => setLanguage("en")}
+                  onClick={() => {
+                    setLanguage("en");
+                    close();
+                  }}
                   className={language === "en" ? "active-lang" : ""}
                 >
                   EN
                 </button>
                 <button
-                  onClick={() => setLanguage("fr")}
+                  onClick={() => {
+                    setLanguage("fr");
+                    close();
+                  }}
                   className={language === "fr" ? "active-lang" : ""}
                 >
                   FR
                 </button>
               </div>
-              <Nav.Link as={Link} to="/" className="custom-nav-link">
+              <Nav.Link
+                as={Link}
+                to="/"
+                className="custom-nav-link"
+                onClick={close}
+              >
                 {strings.nav.home}
               </Nav.Link>
-              <Nav.Link as={Link} to="/products" className="custom-nav-link">
+              <Nav.Link
+                as={Link}
+                to="/products"
+                className="custom-nav-link"
+                onClick={close}
+              >
                 {strings.nav.products}
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact-us" className="custom-nav-link">
+              <Nav.Link
+                as={Link}
+                to="/contact-us"
+                className="custom-nav-link"
+                onClick={close}
+              >
                 {strings.nav.contact}
               </Nav.Link>
-              <Nav.Link as={Link} to="/cart" className="custom-nav-link">
+              <Nav.Link
+                as={Link}
+                to="/cart"
+                className="custom-nav-link"
+                onClick={close}
+              >
                 <FaCartArrowDown /> {price} Kč
               </Nav.Link>
             </Nav>
