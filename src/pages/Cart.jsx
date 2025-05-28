@@ -56,12 +56,16 @@ export default function Cart() {
         <tbody>
           {cartProducts.map((product) => (
             <tr key={product.id}>
-              <td>
+              <td className="cell-image" data-label={strings.cart.image}>
                 <img src={product.image} alt={product.title} />
               </td>
-              <td>{product.title}</td>
-              <td>{product.price.toFixed(2)} Kč</td>
-              <td>
+              <td className="cell-name" data-label={strings.cart.name}>
+                {product.title}
+              </td>
+              <td className="cell-price" data-label={strings.cart.price}>
+                {product.price.toFixed(2)} Kč
+              </td>
+              <td className="cell-quantity" data-label={strings.cart.amount}>
                 <input
                   type="number"
                   min="1"
@@ -72,8 +76,10 @@ export default function Cart() {
                   style={{ width: "50px" }}
                 />
               </td>
-              <td>{(product.price * product.quantity).toFixed(2)} Kč</td>
-              <td>
+              <td className="cell-total" data-label={strings.cart.total}>
+                {(product.price * product.quantity).toFixed(2)} Kč
+              </td>
+              <td className="cell-remove" data-label="">
                 <button onClick={() => removeFromCart(product.id)}>❌</button>
               </td>
             </tr>
