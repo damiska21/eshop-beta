@@ -13,6 +13,7 @@
 .filter {
   background-color: #1e1e1e;
   color: white;
+  top: 92px;
   padding: 2rem;
   border-radius: 3px;
   border: 2px solid #333;
@@ -24,7 +25,7 @@
   flex-direction: column;
   gap: 1rem;
   transition: margin-left 0.3s ease, transform 0.3s ease;
-  z-index: -1;
+  z-index: 1050;
 }
 
 .filter h3 {
@@ -163,18 +164,20 @@
   /* Filter fixace na menších */
   .filter {
     position: fixed;
-    top: 92px;
     left: 0;
     height: 100vh;
     width: 80vw;
     max-width: 300px;
     border-radius: 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
     padding: 2rem 1rem;
     z-index: 1050;
   }
 }
-
+@media(max-width: 992px) and (min-width: 0px){
+  .filter{
+    top: 72px;
+  }
+}
 /* Mobilní zařízení (do 480px) */
 @media (max-width: 480px) {
   .products {
@@ -189,13 +192,11 @@
   /* Filter fixace na mobilu */
   .filter {
     position: fixed;
-    top: 92px;
     left: 0;
     height: 100vh;
     width: 80vw;
     max-width: 300px;
     border-radius: 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
     padding: 2rem 1rem;
     z-index: 1050;
   }
