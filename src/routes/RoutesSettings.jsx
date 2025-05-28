@@ -9,12 +9,14 @@ import Cart from "../pages/Cart";
 //routy, který jsou posílaný společně s Navbarem, aby fungoval
 export default function NavbarRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products filterImport={[]} />} />
-      <Route path="/contact-us" element={<Contact />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/cart" element={<Cart />} />
-    </Routes>
+    <div className="flex-grow-1 ">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products filterImport={[]} />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </div>
   );
 }
