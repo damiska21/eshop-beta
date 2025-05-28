@@ -9,10 +9,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bs-body-bg: #1e1e1e;
-  --bs-body-color: #ffffff;
-  --bs-primary: #f97316;
-  --bs-secondary: #cccccc;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 html {
   --bs-body-bg: #212121 !important;
@@ -24,6 +24,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding-top: 100px;
 }
 
 h1 {

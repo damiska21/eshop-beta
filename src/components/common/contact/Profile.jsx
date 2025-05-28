@@ -1,4 +1,4 @@
-import { useLocalization } from "../../contexts/LocalizationContext";
+import { useLocalization } from "../../../contexts/LocalizationContext";
 import "./Profile.css";
 
 function Profile({ name, location, imgUrl, bgUrl, links }) {

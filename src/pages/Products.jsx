@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Product from "../components/common/Product.jsx";
-import Loader from "../components/common/Loader.jsx";
-import Filter from "../components/common/Filter.jsx";
+import Product from "../components/common/product/Product.jsx";
+import Loader from "../components/common/ui-effects/Loader.jsx";
+import Filter from "../components/common/product/Filter.jsx";
 import "./Products.css";
 import { useSearchParams } from "react-router-dom";
 import { useLocalization } from "../contexts/LocalizationContext.jsx";
-import PageWrapper from "../components/uncommon/PageWrapper.jsx";
+import PageWrapper from "../components/common/ui-effects/PageWrapper.jsx";
 import { DefaultApi, ApiClient } from "../api/src/index.js";
 
 const api = new DefaultApi(new ApiClient());
@@ -28,7 +28,6 @@ export default function Products() {
   // Načtení produktů z API
   useEffect(() => {
     api.getAllProducts().then((data) => {
-      console.log(data.json);
       setAllProducts(data);
       setCategories([...new Set(data.map((item) => item.category))]);
       setFilteredProducts(data);
@@ -98,55 +97,53 @@ export default function Products() {
   if (!filteredProducts) return <Loader />;
   return (
     <>
-      <PageWrapper>
-        <h1>{strings.products.title}</h1>
-        {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
-        {!isFilterVisible && (
-          <div className="filter-toggle-container">
-            <button className="filter-show-button" onClick={toggleFilter}>
-              {strings.products.filter.show}
-            </button>
-          </div>
+      <h1>{strings.products.title}</h1>
+      {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
+      {!isFilterVisible && (
+        <div className="filter-toggle-container">
+          <button className="filter-show-button" onClick={toggleFilter}>
+            {strings.products.filter.show}
+          </button>
+        </div>
+      )}
+
+      <div
+        className={`products-page ${
+          isFilterVisible ? "filter-visible" : "filter-hidden"
+        }`}
+      >
+        {isFilterVisible && (
+          <Filter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+            priceRange={priceRange}
+            onPriceChange={setPriceRange}
+            sort={sort}
+            onSortChange={setSort}
+            onReset={resetFilters}
+            onClose={toggleFilter}
+          />
         )}
 
         <div
-          className={`products-page ${
-            isFilterVisible ? "filter-visible" : "filter-hidden"
+          className={`products ${
+            isFilterVisible ? "with-filter" : "full-width"
           }`}
         >
-          {isFilterVisible && (
-            <Filter
-              categories={categories}
-              selectedCategory={selectedCategory}
-              onCategoryChange={setSelectedCategory}
-              priceRange={priceRange}
-              onPriceChange={setPriceRange}
-              sort={sort}
-              onSortChange={setSort}
-              onReset={resetFilters}
-              onClose={toggleFilter}
+          {filteredProducts.map((item) => (
+            <Product
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              price={item.price}
+              rating={item.rating}
             />
-          )}
-
-          <div
-            className={`products ${
-              isFilterVisible ? "with-filter" : "full-width"
-            }`}
-          >
-            {filteredProducts.map((item) => (
-              <Product
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                description={item.description}
-                image={item.image}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
-          </div>
+          ))}
         </div>
-      </PageWrapper>
+      </div>
     </>
   );
 }

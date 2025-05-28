@@ -91,12 +91,10 @@
   font-size: 1rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  
 }
 
 .todo-section button:hover {
   background-color: #ffa726;
-  
 }
 
 .prazdny {

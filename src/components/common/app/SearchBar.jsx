@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 import { useNavigate } from "react-router-dom";
-import { useLocalization } from "../../contexts/LocalizationContext";
+import { useLocalization } from "../../../contexts/LocalizationContext";
 
 export default function SearchBar() {
   const { strings } = useLocalization();

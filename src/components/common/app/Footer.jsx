@@ -1,4 +1,4 @@
-import { useLocalization } from "../../contexts/LocalizationContext";
+import { useLocalization } from "../../../contexts/LocalizationContext";
 import "./Footer.css";
 
 function Footer() {

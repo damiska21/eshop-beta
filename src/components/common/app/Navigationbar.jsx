@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import NavbarRoutes from "../../routes/RoutesSettings";
+import NavbarRoutes from "../../../routes/RoutesSettings";
 import { FaFireAlt, FaCartArrowDown } from "react-icons/fa";
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../../../contexts/CartContext";
 import SearchBar from "./SearchBar";
 import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import "./Navigationbar.css";
 import { useRef, useState, useEffect } from "react";
-import { useLocalization } from "../../contexts/LocalizationContext";
+import { useLocalization } from "../../../contexts/LocalizationContext";
 
 export default function Navigationbar() {
   const { price } = useCart();
@@ -36,8 +36,9 @@ export default function Navigationbar() {
     { to: "/contact-us", label: strings.nav.contact },
   ];
 
-  const activeLink = navLinks.find(link => link.to === location.pathname) || navLinks[0];
-  const otherLinks = navLinks.filter(link => link.to !== activeLink.to);
+  const activeLink =
+    navLinks.find((link) => link.to === location.pathname) || navLinks[0];
+  const otherLinks = navLinks.filter((link) => link.to !== activeLink.to);
 
   return (
     <>
@@ -50,10 +51,10 @@ export default function Navigationbar() {
             </Navbar.Brand>
           </div>
           <Navbar.Toggle
-              ref={navRef}
-              aria-controls="basic-navbar-nav"
-              className="bg-primary"
-            />
+            ref={navRef}
+            aria-controls="basic-navbar-nav"
+            className="bg-primary"
+          />
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto nav-right">
@@ -62,7 +63,10 @@ export default function Navigationbar() {
               {/* Jazykový přepínač */}
               <div className="lang-switcher">
                 <Dropdown>
-                  <Dropdown.Toggle className="lang-toggle" variant="outline-light">
+                  <Dropdown.Toggle
+                    className="lang-toggle"
+                    variant="outline-light"
+                  >
                     {language.toUpperCase()}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
@@ -114,7 +118,10 @@ export default function Navigationbar() {
               {/* Dropdown "Více" pro úzké obrazovky */}
               {isSmallScreen && (
                 <Dropdown className="more-switcher">
-                  <Dropdown.Toggle className="more-toggle" variant="outline-light">
+                  <Dropdown.Toggle
+                    className="more-toggle"
+                    variant="outline-light"
+                  >
                     {activeLink.label}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>

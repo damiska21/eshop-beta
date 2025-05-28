@@ -1,6 +1,6 @@
 import React from "react";
 import "./Filter.css";
-import { useLocalization } from "../../contexts/LocalizationContext";
+import { useLocalization } from "../../../contexts/LocalizationContext";
 
 function Filter({
   categories,

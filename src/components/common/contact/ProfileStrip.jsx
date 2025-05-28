@@ -1,4 +1,4 @@
-import Profile from "../common/Profile";
+import Profile from "./Profile";
 import "./ProfileStrip.css";
 
 function ProfileStrip() {
@@ -12,8 +12,8 @@ function ProfileStrip() {
         { icon: "codepen", url: "#" },
         { icon: "github", url: "https://github.com" },
         { icon: "linkedin", url: "https://linkedin.com" },
-        { icon: "instagram", url: "https://instagram.com" }
-      ]
+        { icon: "instagram", url: "https://instagram.com" },
+      ],
     },
     {
       name: "Anna Nováková",
@@ -22,8 +22,8 @@ function ProfileStrip() {
       bgUrl: "https://images.unsplash.com/photo-1503264116251-35a269479413",
       links: [
         { icon: "github", url: "https://github.com" },
-        { icon: "linkedin", url: "https://linkedin.com" }
-      ]
+        { icon: "linkedin", url: "https://linkedin.com" },
+      ],
     },
     {
       name: "Lukas Schmidt",
@@ -32,9 +32,9 @@ function ProfileStrip() {
       bgUrl: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f",
       links: [
         { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" }
-      ]
-    }
+        { icon: "linkedin", url: "https://linkedin.com" },
+      ],
+    },
   ];
 
   return (

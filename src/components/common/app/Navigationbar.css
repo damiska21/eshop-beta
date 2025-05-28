@@ -157,7 +157,6 @@
   }
 }
 
-
 @media (max-width: 992px) {
   .navbar-inner {
     /* ZMĚNA: odstranění flex-direction: column */
@@ -195,4 +194,3 @@
     width: auto;
   }
 }
-
