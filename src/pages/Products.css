@@ -76,8 +76,17 @@
 .products {
   display: grid;
   width: 100%;
-  gap: 2rem;
+  gap: 1.5rem;
+  /* defaultní 4 produkty na řádek */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
   transition: all 0.3s ease;
+}
+
+/* --- Omezit šířku jednotlivých karet produktů, aby nebyly moc široké --- */
+.products > * {
+  width: 100%;
+  max-width: 280px; /* max šířka karty */
 }
 
 /* --- Stav: filtr viditelný --- */
@@ -112,7 +121,7 @@
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.2s ease;
-  position: static; /* Původně bylo fixed */
+  position: static; /* původně fixed */
   display: inline-block;
 }
 
@@ -128,47 +137,30 @@
 
 /* --- Responzivita --- */
 
-/* Větší obrazovky (desktop) */
-@media (min-width: 1025px) {
-  .filter {
-    position: fixed;
-    top: 92px;
-    left: 0;
-    height: 100vh;
-    width: 300px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1050;
-  }
-
+/* Desktop velké obrazovky (od 1200px výš) */
+@media (min-width: 1200px) {
   .products {
-    margin-left: 300px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
-  }
-
-  /* Při skrytém filtru filtr schováme zleva */
-  .products-page.filter-hidden .filter {
-    margin-left: -320px;
-    transform: translateX(0);
-  }
-
-  /* Produkty se rozšíří na plnou šířku */
-  .products-page.filter-hidden .products {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  /* Produkty - 4 na řádek s mezerou */
-  .products > * {
-    flex: 0 0 calc(25% - 1.5rem);
   }
 }
 
-/* Menší obrazovky (tablet, mobil) */
-@media (max-width: 1024px) {
-  .products-page {
-    flex-direction: column;
+/* Tablet / střední obrazovky (1025px - 1199px) */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Menší tablety a větší mobily (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
   }
 
+  /* Filter fixace na menších */
   .filter {
     position: fixed;
     top: 92px;
@@ -181,57 +173,57 @@
     padding: 2rem 1rem;
     z-index: 1050;
   }
+}
 
-  /* Výchozí stav - filtr mimo obrazovku vlevo */
-  .products-page.filter-hidden .filter {
-    transform: translateX(-100%);
+/* Mobilní zařízení (do 480px) */
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  /* Při viditelném filtru - vysunutý */
-  .products-page.filter-visible .filter {
+  .card-img {
+    height: 180px;
+  }
+  
+  /* Filter fixace na mobilu */
+  .filter {
+    position: fixed;
+    top: 92px;
+    left: 0;
+    height: 100vh;
+    width: 80vw;
+    max-width: 300px;
+    border-radius: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+    padding: 2rem 1rem;
+    z-index: 1050;
+  }
+}
+
+/* Skrytí filtru a úprava marginů na desktopu */
+@media (min-width: 1025px) {
+  /* Při skrytém filtru filtr schováme zleva */
+  .products-page.filter-hidden .filter {
+    margin-left: -320px;
     transform: translateX(0);
+  }
+
+  /* Produkty se rozšíří na plnou šířku */
+  .products-page.filter-hidden .products {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Na mobilu a tabletu (do 1024px) bude flex column (products-page) */
+@media (max-width: 1024px) {
+  .products-page {
+    flex-direction: column;
   }
 
   .products {
     margin-left: 0 !important;
     width: 100% !important;
-    gap: 1rem;
-  }
-
-  /* Produkty - 2 na řádek */
-  .products > * {
-    flex: 0 0 48%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .products {
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 2.5rem;
-    justify-items: stretch;
-  }
-}
-
-/* Menší desktopy a velké tablety: 3 sloupce s min šířkou */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .products {
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
-    gap: 2rem;
-  }
-}
-
-/* Tablety: 2 sloupce */
-@media (min-width: 600px) and (max-width: 991px) {
-  .products {
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-/* Mobily: 1 sloupec */
-@media (max-width: 599px) {
-  .products {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
