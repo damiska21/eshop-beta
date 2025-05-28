@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:api": "openapi-generator-cli generate -i fakestoreapi.json -g javascript -o src/api"
+    "generate:api": "openapi-generator-cli generate --generator-key fakestoreapi"
   },
   "dependencies": {
     "bootstrap": "^5.3.6",

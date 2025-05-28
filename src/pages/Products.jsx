@@ -26,17 +26,6 @@ export default function Products() {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
 
   // Načtení produktů z API
-
-  /*useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllProducts(data);
-        //získání všech kategorií bez duplikátů
-        setCategories([...new Set(data.map((item) => item.category))]);
-        setFilteredProducts(data);
-      });
-  }, []);*/
   useEffect(() => {
     api.getAllProducts().then((data) => {
       console.log(data.json);

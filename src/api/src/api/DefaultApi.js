@@ -34,21 +34,13 @@ export default class DefaultApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the getAllProducts operation.
-     * @callback module:api/DefaultApi~getAllProductsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Product>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all products
      * Retrieve a list of all available products.
-     * @param {module:api/DefaultApi~getAllProductsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Product>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Product>} and HTTP response
      */
-    getAllProducts(callback) {
+    getAllProductsWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -67,25 +59,29 @@ export default class DefaultApi {
       return this.apiClient.callApi(
         '/products', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getProductById operation.
-     * @callback module:api/DefaultApi~getProductByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Product} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all products
+     * Retrieve a list of all available products.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Product>}
      */
+    getAllProducts() {
+      return this.getAllProductsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get product by ID
      * @param {Number} id 
-     * @param {module:api/DefaultApi~getProductByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Product}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Product} and HTTP response
      */
-    getProductById(id, callback) {
+    getProductByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -109,8 +105,20 @@ export default class DefaultApi {
       return this.apiClient.callApi(
         '/products/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get product by ID
+     * @param {Number} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Product}
+     */
+    getProductById(id) {
+      return this.getProductByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

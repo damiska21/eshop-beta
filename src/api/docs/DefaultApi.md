@@ -23,13 +23,12 @@ Retrieve a list of all available products.
 import FakeStoreApi from 'fake_store_api';
 
 let apiInstance = new FakeStoreApi.DefaultApi();
-apiInstance.getAllProducts((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAllProducts().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -63,13 +62,12 @@ import FakeStoreApi from 'fake_store_api';
 
 let apiInstance = new FakeStoreApi.DefaultApi();
 let id = 56; // Number | 
-apiInstance.getProductById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getProductById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -103,14 +103,12 @@ var FakeStoreApi = require('fake_store_api');
 
 
 var api = new FakeStoreApi.DefaultApi()
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.getAllProducts(callback);
+api.getAllProducts().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+
 
 ```
 
