@@ -6,7 +6,9 @@ import "./Products.css";
 import { useSearchParams } from "react-router-dom";
 import { useLocalization } from "../contexts/LocalizationContext.jsx";
 import PageWrapper from "../components/uncommon/PageWrapper.jsx";
+import { DefaultApi, ApiClient } from "../api/src/index.js";
 
+const api = new DefaultApi(new ApiClient());
 export default function Products() {
   const { strings } = useLocalization();
 
@@ -24,16 +26,13 @@ export default function Products() {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
 
   // Načtení produktů z API
-
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllProducts(data);
-        //získání všech kategorií bez duplikátů
-        setCategories([...new Set(data.map((item) => item.category))]);
-        setFilteredProducts(data);
-      });
+    api.getAllProducts().then((data) => {
+      console.log(data.json);
+      setAllProducts(data);
+      setCategories([...new Set(data.map((item) => item.category))]);
+      setFilteredProducts(data);
+    });
   }, []);
 
   // Reset filtrů
@@ -99,54 +98,54 @@ export default function Products() {
   if (!filteredProducts) return <Loader />;
   return (
     <>
-    <PageWrapper>
-      <h1>{strings.products.title}</h1>
-      {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
-      {!isFilterVisible && (
-        <div className="filter-toggle-container">
-          <button className="filter-show-button" onClick={toggleFilter}>
-            {strings.products.filter.show}
-          </button>
-        </div>
-      )}
-
-      <div
-        className={`products-page ${
-          isFilterVisible ? "filter-visible" : "filter-hidden"
-        }`}
-      >
-        {isFilterVisible && (
-          <Filter
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
-            priceRange={priceRange}
-            onPriceChange={setPriceRange}
-            sort={sort}
-            onSortChange={setSort}
-            onReset={resetFilters}
-            onClose={toggleFilter}
-          />
+      <PageWrapper>
+        <h1>{strings.products.title}</h1>
+        {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
+        {!isFilterVisible && (
+          <div className="filter-toggle-container">
+            <button className="filter-show-button" onClick={toggleFilter}>
+              {strings.products.filter.show}
+            </button>
+          </div>
         )}
 
         <div
-          className={`products ${
-            isFilterVisible ? "with-filter" : "full-width"
+          className={`products-page ${
+            isFilterVisible ? "filter-visible" : "filter-hidden"
           }`}
         >
-          {filteredProducts.map((item) => (
-            <Product
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              description={item.description}
-              image={item.image}
-              price={item.price}
-              rating={item.rating}
+          {isFilterVisible && (
+            <Filter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+              priceRange={priceRange}
+              onPriceChange={setPriceRange}
+              sort={sort}
+              onSortChange={setSort}
+              onReset={resetFilters}
+              onClose={toggleFilter}
             />
-          ))}
+          )}
+
+          <div
+            className={`products ${
+              isFilterVisible ? "with-filter" : "full-width"
+            }`}
+          >
+            {filteredProducts.map((item) => (
+              <Product
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                description={item.description}
+                image={item.image}
+                price={item.price}
+                rating={item.rating}
+              />
+            ))}
+          </div>
         </div>
-      </div>
       </PageWrapper>
     </>
   );
