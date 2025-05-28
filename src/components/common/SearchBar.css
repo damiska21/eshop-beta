@@ -62,3 +62,9 @@ background-color: #f97316;
     50% { transform: rotate(-20deg); transform: translate(-2px, -2px);}
     100% { transform: rotate(0deg); transform: translate(0px, 0px)}
   }
+
+  .search-bar {
+  width: 100%;
+  max-width: 300px;
+}
+

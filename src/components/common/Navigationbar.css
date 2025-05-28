@@ -95,19 +95,38 @@
   .navbar-inner {
     flex-direction: column;
     align-items: stretch;
+    padding: 0.5rem 1rem;
   }
 
   .nav-right {
     flex-direction: column;
-    align-items: center; /* zarovná odkazy doprostřed */
+    align-items: stretch;
     gap: 1rem;
     padding: 1rem 0;
+    width: 100%;
   }
 
   .navbar-header {
     width: 100%;
     justify-content: space-between;
   }
+
+  .lang-switcher {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .lang-switcher button {
+    flex: 1;
+  }
+
+  .custom-nav-link {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 }
+
+
+
 
 
