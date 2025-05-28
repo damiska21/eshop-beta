@@ -56,6 +56,7 @@ function Form() {
           className="form-control"
           id="name"
           name="name"
+          placeholder="Name"
           value={formData.name}
           onChange={handleChange}
         />
@@ -85,6 +86,7 @@ function Form() {
           id="message"
           name="message"
           rows="4"
+          placeholder="Message"
           value={formData.message}
           onChange={handleChange}
         />

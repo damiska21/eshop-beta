@@ -1,3 +1,4 @@
+/* === ZÁKLADNÍ STYL NAVBARU === */
 .custom-navbar {
   background-color: #1e1e1e;
   color: white;
@@ -10,20 +11,10 @@
 .navbar-inner {
   padding: 0.5rem 2rem;
   display: flex;
-  justify-content: flex-start; /* místo space-between */
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem; /* volitelné – odděluje levou a pravou část */
+  flex-wrap: nowrap;
 }
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-left: 2rem; /* posune doprava blíže k logu */
-}
-
 
 .navbar-header {
   display: flex;
@@ -31,7 +22,7 @@
   gap: 1rem;
 }
 
-/* Logo */
+/* === LOGO === */
 .brand-link {
   text-decoration: none;
   color: white !important;
@@ -47,86 +38,161 @@
   font-size: 25px;
 }
 
-/* Odkazy */
-.nav-right {
-  display: flex;
+/* === DROPDOWN TOGGLE BUTTONS (Jazyk i Více) === */
+.dropdown-toggle.lang-toggle,
+.dropdown-toggle.more-toggle {
+  border: 1px solid white !important;
+  color: white !important;
+  background: none !important;
+  font-weight: bold;
+  padding: 0.3rem 0.75rem;
+  min-width: 110px;
+  height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
 }
-.lang-switcher {
+
+.dropdown-toggle.lang-toggle:hover,
+.dropdown-toggle.lang-toggle:focus,
+.dropdown-toggle.lang-toggle.show,
+.dropdown-toggle.more-toggle:hover,
+.dropdown-toggle.more-toggle:focus,
+.dropdown-toggle.more-toggle.show {
+  background-color: #f97316 !important;
+  border-color: #f97316 !important;
+  color: black !important;
+}
+
+/* === DROPDOWN MENU === */
+.dropdown-menu {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f97316;
+  color: black;
+}
+
+.dropdown-item.active,
+.dropdown-item.active:hover,
+.dropdown-active-item {
+  background-color: #f97316 !important;
+  color: black !important;
+  font-weight: 700;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f97316 !important;
+  color: black !important;
+}
+
+/* === JAZYKOVÝ PŘEPÍNAČ === */
+.lang-switcher,
+.more-switcher {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
-.lang-switcher button {
-  background: none;
-  border: 1px solid white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s ease;
+/* === NAVIGAČNÍ ODKAZY === */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
 }
-
-.lang-switcher button:hover,
-.lang-switcher button.active-lang {
-  background-color: #f97316;
-  border-color: #f97316;
-  color: black;
-}
-
 
 .custom-nav-link {
   color: white !important;
   font-weight: 500;
   transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.custom-nav-link svg {
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 .custom-nav-link:hover {
   color: #f97316 !important;
 }
 
-/* Hamburger styl od 992px dolů (přibližně 900px) */
-@media (max-width: 992px) {
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* 993–1165px – zmenšení paddingu a písma */
+@media (max-width: 1165px) and (min-width: 993px) {
   .navbar-inner {
-    flex-direction: column;
-    align-items: stretch;
     padding: 0.5rem 1rem;
   }
 
   .nav-right {
-    flex-direction: column;
-    align-items: stretch;
     gap: 1rem;
-    padding: 1rem 0;
-    width: 100%;
-  }
-
-  .navbar-header {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .lang-switcher {
-    justify-content: center;
-    margin: 1rem 0;
-  }
-
-  .lang-switcher button {
-    flex: 1;
   }
 
   .custom-nav-link {
-    text-align: center;
-    padding: 0.5rem 0;
+    font-size: 15px;
+  }
+
+  .dropdown-toggle.lang-toggle,
+  .dropdown-toggle.more-toggle {
+    font-size: 13px;
+    padding: 0.25rem 0.6rem;
   }
 }
 
 
+@media (max-width: 992px) {
+  .navbar-inner {
+    /* ZMĚNA: odstranění flex-direction: column */
+    flex-direction: row; /* PŘIDAT */
+    align-items: center;
+    justify-content: space-between; /* PŘIDAT */
+    padding: 0.5rem 1rem;
+  }
 
+  .navbar-header {
+    width: auto; /* PŮVODNÍ: 100%, změnit na auto */
+    justify-content: start;
+  }
 
+  .nav-right {
+    flex-direction: row; /* Změnit zpět na řádek */
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    gap: 1rem;
+    padding: 0; /* Odebrat padding */
+  }
+
+  .lang-switcher {
+    margin: 0;
+  }
+
+  .custom-nav-link {
+    text-align: left;
+    padding: 0;
+  }
+
+  .dropdown-toggle.lang-toggle,
+  .dropdown-toggle.more-toggle {
+    width: auto;
+  }
+}
 
