@@ -40,10 +40,11 @@
 }
 
 .form-control:focus {
-  border-color: #f97316;
+   border-color: #f97316 !important;
+  box-shadow: 0 0 8px 3px rgba(249, 115, 22, 0.8) !important;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
 }
+
 
 .btn {
   display: inline-block;
