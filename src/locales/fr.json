@@ -78,20 +78,31 @@
     "addtocart": "Ajouter au panier"
   },
   "contact": {
-    "title": "Contact",
-    "coworkers": "Équipe",
-    "hover": "Survolez pour les liens",
-    "formtitle": "Contactez-nous",
-    "name": "Nom",
-    "email": "Adresse e-mail",
-    "text": "Message",
-    "send": "Envoyer",
-    "popup": {
-      "fieldempty": "Veuillez remplir tous les champs.",
-      "emailinvalid": "Veuillez entrer une adresse email valide.",
-      "messagesent": "Message envoyé !"
-    }
+  "title": "Contact",
+  "coworkers": "Équipe",
+  "hover": "Survolez pour les liens",
+  "formtitle": "Contactez-nous",
+  "name": "Nom",
+  "email": "Adresse e-mail",
+  "text": "Message",
+  "send": "Envoyer",
+  "popup": {
+    "fieldempty": "Veuillez remplir tous les champs.",
+    "emailinvalid": "Veuillez entrer une adresse e-mail valide.",
+    "messagesent": "Message envoyé !"
   },
+  "basicinfo": "Informations de base",
+  "companyname": "Équipe Beta SARL",
+  "adress": "Prague 1, République tchèque",
+  "email": "info@eshopteamubeta.com",
+  "phone": "+420 123 456 789",
+  "opening": "Horaires d'ouverture",
+  "monfri": "Lundi–Vendredi",
+  "saturday": "Samedi",
+  "sunday": "Dimanche",
+  "closed": "Fermé",
+  "socials": "Réseaux sociaux"
+},
   "cart": {
     "title": "Panier",
     "image": "Image",

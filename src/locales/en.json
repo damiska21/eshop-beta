@@ -78,20 +78,31 @@
     "addtocart": "Add to cart"
   },
   "contact": {
-    "title": "Contact",
-    "coworkers": "Team",
-    "hover": "Hover for links",
-    "formtitle": "Contact Us",
-    "name": "Name",
-    "email": "Email address",
-    "text": "Message",
-    "send": "Send",
-    "popup": {
-      "fieldempty": "Please fill in all fields.",
-      "emailinvalid": "Enter a valid email address.",
-      "messagesent": "Message sent!"
-    }
+  "title": "Contact",
+  "coworkers": "Team Members",
+  "hover": "Hover for links",
+  "formtitle": "Contact Us",
+  "name": "Name",
+  "email": "Email Address",
+  "text": "Message",
+  "send": "Send",
+  "popup": {
+    "fieldempty": "Please fill in all fields.",
+    "emailinvalid": "Enter a valid email address.",
+    "messagesent": "Message sent!"
   },
+  "basicinfo": "Basic Information",
+  "companyname": "Team Beta Ltd.",
+  "adress": "Prague 1, Czech Republic",
+  "email": "info@eshopteamubeta.com",
+  "phone": "+420 123 456 789",
+  "opening": "Opening Hours",
+  "monfri": "Monday–Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "closed": "Closed",
+  "socials": "Social Networks"
+},
   "cart": {
     "title": "Cart",
     "image": "Image",

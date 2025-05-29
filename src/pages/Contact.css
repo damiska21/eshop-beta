@@ -1,0 +1,67 @@
+.contact-info {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-section {
+  border-left: 4px solid #f97316;
+  padding-left: 1rem;
+}
+
+.contact-section h3 {
+  color: #f97316;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p,
+.contact-section li {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  line-height: 1.6;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: white;
+  background-color: #333;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #f97316;
+  color: black;
+}
+
+/* Responsive úpravy */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+  
+}
