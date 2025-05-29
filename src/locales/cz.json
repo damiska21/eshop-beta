@@ -15,6 +15,7 @@
     "termsconditions": "Obchodní podmínky",
     "privacypolicy": "Zásady ochrany osobních údajů"
   },
+
   "home": {
     "h1": "Vítejte v E-shopu týmu Beta",
     "h2": "O nás",
@@ -36,7 +37,20 @@
           "text": "Vaše data chráníme a platby jsou zabezpečené."
         }
       ]
-    }
+    },
+    "howItWorksTitle": "Jak to funguje?",
+    "howItWorksSteps": [
+      "Vyber si produkt",
+      "Přidej do košíku",
+      "Zaplať jednoduše",
+      "Počkej na doručení"
+    ],
+    "reviewsTitle": "Co říkají zákazníci",
+    "reviews": [
+      { "text": "Skvělé produkty a rychlé dodání!", "author": "Jana" },
+      { "text": "Výborná komunikace a kvalita.", "author": "Martin" }
+    ],
+    "cta": "Nakupovat"
   },
 
   "products": {
@@ -66,20 +80,31 @@
     "addtocart": "Přidat do košíku"
   },
   "contact": {
-    "title": "Kontakt",
-    "coworkers": "Pracovníci",
-    "hover": "Přejeď myší pro odkazy",
-    "formtitle": "Kontaktujte nás",
-    "name": "Jméno",
-    "email": "Emailová adresa",
-    "text": "Zpráva",
-    "send": "Odeslat",
-    "popup": {
-      "fieldempty": "Vyplň prosím všechna pole.",
-      "emailinvalid": "Zadej platnou e-mailovou adresu.",
-      "messagesent": "Zpráva odeslána!"
-    }
+  "title": "Kontakt",
+  "coworkers": "Pracovníci",
+  "hover": "Přejeď myší pro odkazy",
+  "formtitle": "Kontaktujte nás",
+  "name": "Jméno",
+  "email": "Emailová adresa",
+  "text": "Zpráva",
+  "send": "Odeslat",
+  "popup": {
+    "fieldempty": "Vyplň prosím všechna pole.",
+    "emailinvalid": "Zadej platnou e-mailovou adresu.",
+    "messagesent": "Zpráva odeslána!"
   },
+  "basicinfo": "Základní informace",
+  "companyname": "Tým Beta s.r.o.",
+  "adress": "Praha 1, Česká republika",
+  "email": "info@eshopteamubeta.com",
+  "phone": "+420 123 456 789",
+  "opening": "Otevírací doba",
+  "monfri": "Pondělí–Pátek",
+  "saturday": "Sobota",
+  "sunday": "Neděle",
+  "closed": "Zavřeno",
+  "socials": "Sociální sítě"
+},
   "cart": {
     "title": "Košík",
     "image": "Obrázek",

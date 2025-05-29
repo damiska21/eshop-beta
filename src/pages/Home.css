@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   animation: fadeIn 0.8s ease-in;
+  color: #e5e7eb; /* světlá šedobílá pro text */
 }
 
 @keyframes fadeIn {
@@ -16,17 +17,41 @@
   }
 }
 
-.home-header {
+/* Hero sekce */
+.home-hero {
+  padding: 3rem 2rem;
+  border-radius: 16px;
   text-align: center;
-  margin-bottom: 2rem;
+  color: #f9fafb; /* téměř bílá */
+  margin-bottom: 2.5rem;
 }
 
-p {
+.home-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f97316; /* oranžová */
+}
+
+.home-hero h2 {
+  font-size: 1.5rem;
+  color: #e5e7eb; /* světlejší šedá */
+  margin-bottom: 1.5rem;
+}
+
+.home-hero p {
   max-width: 700px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.2rem;
   font-size: 1.125rem;
   line-height: 1.6;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Výhody */
+.benefits-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f97316;
 }
 
 .articles-wrapper {
@@ -34,54 +59,125 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin: 2rem 0;
 }
 
 article {
   flex: 1 1 280px;
   max-width: 320px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #222222; /* tmavší než navbar */
+  border: 1px solid #ffffff; /* bílý border */
   padding: 1.5rem;
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  color: #f9fafb;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 article:hover {
   transform: translateY(-4px);
+  border-color: #f97316;
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.6);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #f97316;
 }
 
 article h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #f9fafb;
 }
 
 article p {
-  color: #ddd;
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
+  color: #d1d5db;
 }
 
-/* CTA link */
-.custom-link.cta-link {
-  display: inline-block;
-  padding: 14px 32px;
-  color: #ffffff;
+/* Jak to funguje */
+.how-it-works {
+  margin: 3rem 0;
+  text-align: center;
+  color: #e5e7eb;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f97316;
+}
+
+.how-it-works ol {
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works li {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  color: #d1d5db;
+}
+
+/* Recenze */
+.reviews {
+  margin: 3rem 0;
+  text-align: center;
+  color: #e5e7eb;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
+
+.review-card {
+  background: #1e1e1e;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  max-width: 600px;
+  color: #f9fafb;
+  font-style: italic;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.review-card span {
+  display: block;
+  margin-top: 0.5rem;
   font-weight: 700;
-  border: 2px solid #ffffff;
-  border-radius: 6px;
+  color: #f97316;
+}
+
+/* CTA */
+.custom-link.cta-link {
+  display: block;
+  padding: 14px 32px;
+  color: #e5e7eb; /* tmavý text */
+  font-weight: 700;
+  border: 2px solid #ffffff; /* bílý border */
+  border-radius: 10px;
   text-decoration: none;
   font-size: 1.35rem;
   transition: all 0.3s ease;
-  margin: 2rem auto 0;
-  max-width: 280px;
+  margin: 3rem auto;
+  max-width: 300px;
+  text-align: center;
 }
 
 .custom-link.cta-link:hover,
-.custom-link.cta-link:focus {
-  border-color: #f97316;
-  color: #f97316;
+.custom-link.cta-link:focus { 
+  color: #f97316;           
+  border-color: #f97316;     
+}
+
+@media (max-width: 600px) {
+  .custom-link.cta-link {
+    width: 100%;
+    font-size: 1.15rem;
+  }
 }

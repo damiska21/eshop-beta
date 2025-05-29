@@ -4,6 +4,7 @@ export default function PrivacyPolicy() {
   const { strings } = useLocalization();
   return (
     <PageWrapper>
+      <div className="justify">
       <h1>{strings.privacypolicy.title}</h1>
       <h2>{strings.privacypolicy.h1}</h2>
       <p>{strings.privacypolicy.t1}</p>
@@ -19,6 +20,7 @@ export default function PrivacyPolicy() {
       <p>{strings.privacypolicy.t6}</p>
       <h2>{strings.privacypolicy.h7}</h2>
       <p>{strings.privacypolicy.t7}</p>
+      </div>
     </PageWrapper>
   );
 }
