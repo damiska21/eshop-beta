@@ -40,6 +40,7 @@ export default function Cart() {
   }
 
   return (
+    <PageWrapper>
     <div className="cart-container">
       <h1>{strings.cart.title}</h1>
       <table className="cart-table">
@@ -103,5 +104,6 @@ export default function Cart() {
         </button>
       </div>
     </div>
+    </PageWrapper>
   );
 }

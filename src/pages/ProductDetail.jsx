@@ -6,6 +6,7 @@ import { useCart } from "../contexts/CartContext.jsx";
 import { RatingContext } from "../contexts/RatingContext";
 import React from "react";
 import { useLocalization } from "../contexts/LocalizationContext.jsx";
+import PageWrapper from "../components/common/ui-effects/PageWrapper.jsx";
 
 export default function ProductDetail() {
   const { strings } = useLocalization();
@@ -37,6 +38,7 @@ export default function ProductDetail() {
     const totalStars = 5;
 
     return (
+      <PageWrapper>
       <div className="star-rating interactive">
         {[...Array(totalStars)].map((_, i) => {
           const starValue = totalStars - i; // 5,4,3,2,1
@@ -66,12 +68,14 @@ export default function ProductDetail() {
           {rating.count} {strings.products.rating.votes})
         </span>
       </div>
+      </PageWrapper>
     );
   };
 
   if (!product) return <Loader />;
 
   return (
+    <PageWrapper>
     <div className="product-detail">
       <h1>{product.title}</h1>
       <img src={product.image} alt={product.title} className="product-image" />
@@ -86,5 +90,6 @@ export default function ProductDetail() {
         </button>
       </div>
     </div>
+    </PageWrapper>
   );
 }

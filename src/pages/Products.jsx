@@ -97,6 +97,7 @@ export default function Products() {
   if (!filteredProducts) return <Loader />;
   return (
     <>
+    <PageWrapper>
       <h1>{strings.products.title}</h1>
       {query.split(";").length != 1 && <h1>{strings.products.searching}</h1>}
       {!isFilterVisible && (
@@ -144,6 +145,7 @@ export default function Products() {
           ))}
         </div>
       </div>
+      </PageWrapper>
     </>
   );
 }
