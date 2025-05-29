@@ -30,80 +30,76 @@ export default function Cart() {
 
   if (cart.length === 0) {
     return (
-      <>
-        {" "}
-        <PageWrapper>
-          <p className="prazdny">{strings.cart.empty}</p>{" "}
-        </PageWrapper>{" "}
-      </>
+      <PageWrapper>
+        <p className="prazdny">{strings.cart.empty}</p>
+      </PageWrapper>
     );
   }
 
   return (
     <PageWrapper>
-    <div className="cart-container">
-      <h1>{strings.cart.title}</h1>
-      <table className="cart-table">
-        <thead>
-          <tr>
-            <th>{strings.cart.image}</th>
-            <th>{strings.cart.name}</th>
-            <th>{strings.cart.price}</th>
-            <th>{strings.cart.amount}</th>
-            <th>{strings.cart.total}</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartProducts.map((product) => (
-            <tr key={product.id}>
-              <td className="cell-image" data-label={strings.cart.image}>
-                <img src={product.image} alt={product.title} />
-              </td>
-              <td className="cell-name" data-label={strings.cart.name}>
-                {product.title}
-              </td>
-              <td className="cell-price" data-label={strings.cart.price}>
-                {product.price.toFixed(2)} Kč
-              </td>
-              <td className="cell-quantity" data-label={strings.cart.amount}>
-                <input
-                  type="number"
-                  min="1"
-                  value={product.quantity}
-                  onChange={(e) =>
-                    updateQuantity(product.id, parseInt(e.target.value) || 1)
-                  }
-                  style={{ width: "50px" }}
-                />
-              </td>
-              <td className="cell-total" data-label={strings.cart.total}>
-                {(product.price * product.quantity).toFixed(2)} Kč
-              </td>
-              <td className="cell-remove" data-label="">
-                <button onClick={() => removeFromCart(product.id)}>❌</button>
-              </td>
+      <div className="cart-container">
+        <h1>{strings.cart.title}</h1>
+        <table className="cart-table">
+          <thead>
+            <tr>
+              <th>{strings.cart.image}</th>
+              <th>{strings.cart.name}</th>
+              <th>{strings.cart.price}</th>
+              <th>{strings.cart.amount}</th>
+              <th>{strings.cart.total}</th>
+              <th></th>
             </tr>
-          ))}
-          <tr className="cart-total-row">
-            <td colSpan="4" style={{ textAlign: "right", fontWeight: "bold" }}>
-              {strings.cart.total}
-            </td>
-            <td style={{ fontWeight: "bold" }}>{price.toFixed(2)} Kč</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {cartProducts.map((product) => (
+              <tr key={product.id}>
+                <td className="cell-image" data-label={strings.cart.image}>
+                  <img src={product.image} alt={product.title} />
+                </td>
+                <td className="cell-name" data-label={strings.cart.name}>
+                  {product.title}
+                </td>
+                <td className="cell-price" data-label={strings.cart.price}>
+                  {product.price.toFixed(2)} Kč
+                </td>
+                <td className="cell-quantity" data-label={strings.cart.amount}>
+                  <input
+                    type="number"
+                    min="1"
+                    value={product.quantity}
+                    onChange={(e) =>
+                      updateQuantity(product.id, parseInt(e.target.value) || 1)
+                    }
+                  />
+                </td>
+                <td className="cell-total" data-label={strings.cart.total}>
+                  {(product.price * product.quantity).toFixed(2)} Kč
+                </td>
+                <td className="cell-remove">
+                  <button onClick={() => removeFromCart(product.id)}>
+                    <span className="remove-icon">×</span>
+                    <span className="remove-text"> × Smazat</span>
+                  </button>
+                </td>
+              </tr>
+            ))}
+            <tr className="cart-total-row">
+              <td colSpan="4" style={{ textAlign: "right", fontWeight: "bold" }}>
+                {strings.cart.total}
+              </td>
+              <td style={{ fontWeight: "bold" }}>{price.toFixed(2)} Kč</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div className="todo-section">
-        <button
-          onClick={clearCart}
-          style={{ padding: "8px 12px", cursor: "pointer" }}
-        >
-          {strings.cart.delete}
-        </button>
+        <div className="todo-section">
+          <button onClick={clearCart}>
+            {strings.cart.delete}
+          </button>
+        </div>
       </div>
-    </div>
     </PageWrapper>
   );
 }
