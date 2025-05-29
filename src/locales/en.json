@@ -16,28 +16,41 @@
     "privacypolicy": "Privacy Policy"
   },
   "home": {
-    "h1": "Welcome to Team Beta E-shop",
-    "h2": "About Us",
-    "text1": "We are a team of passionate experts creating a high-quality e-shop where you'll find a wide range of products at great prices. Our goal is to provide you with a comfortable and secure shopping experience with fast delivery.",
-    "text2": "We care about customer satisfaction, so we continuously improve our services and add new features to make your shopping easier.",
-    "benefits": {
-      "title": "Why shop with us?",
-      "items": [
-        {
-          "title": "Fast Delivery",
-          "text": "We ship products within 24 hours of ordering."
-        },
-        {
-          "title": "Customer Support",
-          "text": "Our team is available every day to assist you."
-        },
-        {
-          "title": "Secure Shopping",
-          "text": "Your data is protected and payments are secured."
-        }
-      ]
-    }
+  "h1": "Welcome to Team Beta E-shop",
+  "h2": "About Us",
+  "text1": "We are a team of passionate experts creating a high-quality e-shop where you'll find a wide range of products at great prices. Our goal is to provide you with a comfortable and secure shopping experience with fast delivery.",
+  "text2": "We care about customer satisfaction, so we continuously improve our services and add new features to make your shopping easier.",
+  "benefits": {
+    "title": "Why shop with us?",
+    "items": [
+      {
+        "title": "Fast Delivery",
+        "text": "We ship products within 24 hours of ordering."
+      },
+      {
+        "title": "Customer Support",
+        "text": "Our team is available every day to assist you."
+      },
+      {
+        "title": "Secure Shopping",
+        "text": "Your data is protected and payments are secured."
+      }
+    ]
   },
+  "howItWorksTitle": "How it works?",
+  "howItWorksSteps": [
+    "Choose a product",
+    "Add to cart",
+    "Pay easily",
+    "Wait for delivery"
+  ],
+  "reviewsTitle": "What customers say",
+  "reviews": [
+    { "text": "Great products and fast delivery!", "author": "Jana" },
+    { "text": "Excellent communication and quality.", "author": "Martin" }
+  ],
+  "cta": "Shop now"
+},
   "products": {
     "title": "Products",
     "searching": "searching",

@@ -15,6 +15,7 @@
     "termsconditions": "Obchodní podmínky",
     "privacypolicy": "Zásady ochrany osobních údajů"
   },
+
   "home": {
     "h1": "Vítejte v E-shopu týmu Beta",
     "h2": "O nás",
@@ -36,7 +37,20 @@
           "text": "Vaše data chráníme a platby jsou zabezpečené."
         }
       ]
-    }
+    },
+    "howItWorksTitle": "Jak to funguje?",
+    "howItWorksSteps": [
+      "Vyber si produkt",
+      "Přidej do košíku",
+      "Zaplať jednoduše",
+      "Počkej na doručení"
+    ],
+    "reviewsTitle": "Co říkají zákazníci",
+    "reviews": [
+      { "text": "Skvělé produkty a rychlé dodání!", "author": "Jana" },
+      { "text": "Výborná komunikace a kvalita.", "author": "Martin" }
+    ],
+    "cta": "Prohlédnout produkty"
   },
 
   "products": {

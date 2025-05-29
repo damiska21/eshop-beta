@@ -16,28 +16,41 @@
     "privacypolicy": "Politique de confidentialité"
   },
   "home": {
-    "h1": "Bienvenue sur la boutique en ligne de l'équipe Beta",
-    "h2": "À propos de nous",
-    "text1": "Nous sommes une équipe de passionnés qui créent une boutique en ligne de qualité avec un large choix de produits à des prix avantageux. Notre objectif est de vous offrir une expérience d'achat confortable et sécurisée avec une livraison rapide.",
-    "text2": "Nous mettons un point d'honneur à la satisfaction de nos clients. C'est pourquoi nous améliorons continuellement nos services et ajoutons de nouvelles fonctionnalités pour faciliter vos achats.",
-    "benefits": {
-      "title": "Pourquoi acheter chez nous ?",
-      "items": [
-        {
-          "title": "Livraison rapide",
-          "text": "Les produits sont expédiés sous 24 heures après commande."
-        },
-        {
-          "title": "Support client",
-          "text": "Notre équipe est disponible chaque jour pour vous aider."
-        },
-        {
-          "title": "Achat sécurisé",
-          "text": "Vos données sont protégées et les paiements sécurisés."
-        }
-      ]
-    }
+  "h1": "Bienvenue sur la boutique en ligne de l'équipe Beta",
+  "h2": "À propos de nous",
+  "text1": "Nous sommes une équipe de passionnés spécialisés dans la création d'une boutique en ligne de qualité, où vous trouverez un large choix de produits à des prix avantageux. Notre objectif est de vous offrir une expérience d'achat confortable et sécurisée avec une livraison rapide.",
+  "text2": "Nous attachons une grande importance à la satisfaction de nos clients, c'est pourquoi nous améliorons constamment nos services et ajoutons de nouvelles fonctionnalités pour faciliter votre choix et vos achats.",
+  "benefits": {
+    "title": "Pourquoi acheter chez nous ?",
+    "items": [
+      {
+        "title": "Livraison rapide",
+        "text": "Les produits sont expédiés sous 24 heures après commande."
+      },
+      {
+        "title": "Support client",
+        "text": "Notre équipe est disponible chaque jour pour vous aider."
+      },
+      {
+        "title": "Achat sécurisé",
+        "text": "Vos données sont protégées et les paiements sont sécurisés."
+      }
+    ]
   },
+  "howItWorksTitle": "Comment ça marche ?",
+  "howItWorksSteps": [
+    "Choisissez un produit",
+    "Ajoutez-le au panier",
+    "Payez facilement",
+    "Attendez la livraison"
+  ],
+  "reviewsTitle": "Ce que disent nos clients",
+  "reviews": [
+    { "text": "Produits excellents et livraison rapide !", "author": "Jana" },
+    { "text": "Communication et qualité remarquables.", "author": "Martin" }
+  ],
+  "cta": "Voir les produits"
+},
   "products": {
     "title": "Produits",
     "searching": "recherche",
