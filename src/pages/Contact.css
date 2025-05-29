@@ -6,10 +6,13 @@
   flex-direction: column;
   gap: 2.5rem;
 }
-
+.c-h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
 .contact-section {
   border-left: 4px solid #f97316;
-  padding-left: 1rem;
+  margin-bottom: 10px;
 }
 
 .contact-section h3 {
