@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
     <LocalizationProvider>
       <CartProvider>
         <RatingProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/eshop-beta">
             <ScrollToTop />
             <App />
           </BrowserRouter>
