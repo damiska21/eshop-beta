@@ -1,93 +1,127 @@
 {
-    "nav":{
-        "home": "Domů",
-        "products": "Produkty",
-        "contact": "Kontaktujte nás",
-        "search": "Vyhledejte produkt ..."
-    },
-    "footer":{
-        "contact":"Kontakt",
-        "email":"Email: info@eshop.cz",
-        "phone":"Telefon: +420 123 456 789",
-        "adress":"Adresa: Praha 1, Česká republika",
-        "links":"Odkazy",
-        "aboutus":"O nás",
-        "termsconditions":"Obchodní podmínky",
-        "privacypolicy":"Zásady ochrany osobních údajů"
-    },
-    "home": {
-  "h1": "Vítejte v E-shopu týmu Beta",
-  "h2": "O nás",
-  "text1": "Jsme tým nadšených odborníků, kteří se věnují tvorbě kvalitního e-shopu, kde najdete široký výběr produktů za skvělé ceny. Naším cílem je zajistit vám pohodlný a bezpečný nákup s rychlým doručením.",
-  "text2": "Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a přidáváme nové funkce, které vám usnadní výběr a nákup.",
-  "benefits": {
-    "title": "Proč nakupovat u nás?",
-    "items": [
-      {
-        "title": "Rychlé doručení",
-        "text": "Zboží odesíláme do 24 hodin od objednání."
-      },
-      {
-        "title": "Zákaznická podpora",
-        "text": "Náš tým je vám k dispozici každý den."
-      },
-      {
-        "title": "Bezpečný nákup",
-        "text": "Vaše data chráníme a platby jsou zabezpečené."
-      }
-    ]
-  }
-},
-
-    "products":{
-        "title":"Produkty",
-        "searching":"vyhledávání",
-        "rating":{
-            "votes":"hlasů",
-            "from":"z",
-            "ratepopup1":"Hodnotit ",
-            "ratepopup2":" hvězdiček"
+  "nav": {
+    "home": "Domů",
+    "products": "Produkty",
+    "contact": "Kontaktujte nás",
+    "search": "Vyhledejte produkt ..."
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "email": "Email: info@eshopteamubeta.com",
+    "phone": "Telefon: +420 123 456 789",
+    "adress": "Adresa: Praha 1, Česká republika",
+    "links": "Odkazy",
+    "aboutus": "O nás",
+    "termsconditions": "Obchodní podmínky",
+    "privacypolicy": "Zásady ochrany osobních údajů"
+  },
+  "home": {
+    "h1": "Vítejte v E-shopu týmu Beta",
+    "h2": "O nás",
+    "text1": "Jsme tým nadšených odborníků, kteří se věnují tvorbě kvalitního e-shopu, kde najdete široký výběr produktů za skvělé ceny. Naším cílem je zajistit vám pohodlný a bezpečný nákup s rychlým doručením.",
+    "text2": "Dbáme na spokojenost zákazníků, proto neustále zlepšujeme služby a přidáváme nové funkce, které vám usnadní výběr a nákup.",
+    "benefits": {
+      "title": "Proč nakupovat u nás?",
+      "items": [
+        {
+          "title": "Rychlé doručení",
+          "text": "Zboží odesíláme do 24 hodin od objednání."
         },
-        "filter":{
-            "show":"Zobrazit filtr",
-            "title":"Filtrovat produkty",
-            "category":"Kategorie",
-            "pricefrom":"Cena od",
-            "priceto":"Cena do",
-            "sorting":"Řazení",
-            "all":"Vše",
-            "none":"Žádné",
-            "priceasc":"Cena vzestupně",
-            "pricedes":"Cena sestupně",
-            "az":"Název A až Z",
-            "za":"Název Z až A",
-            "reset":"Resetovat filtry"
+        {
+          "title": "Zákaznická podpora",
+          "text": "Náš tým je vám k dispozici každý den."
         },
-        "addtocart":"Přidat do košíku"
-    },
-    "contact":{
-        "title":"Kontakt",
-        "coworkers":"Pracovníci",
-        "hover":"Přejeď myší pro odkazy",
-        "formtitle":"Kontaktujte nás",
-        "name":"Jméno",
-        "email":"Emailová adresa",
-        "text":"Zpráva",
-        "send":"Odeslat",
-        "popup":{
-            "fieldempty":"Vyplň prosím všechna pole.",
-            "emailinvalid":"Zadej platnou e-mailovou adresu.",
-            "messagesent":"Zpráva odeslána!"
+        {
+          "title": "Bezpečný nákup",
+          "text": "Vaše data chráníme a platby jsou zabezpečené."
         }
-    },
-    "cart":{
-        "title":"Košík",
-        "image":"Obrázek",
-        "name":"Název",
-        "price":"Cena",
-        "amount":"Množství",
-        "total":"Celkem",
-        "delete":"Vyprázdnit celý košík",
-        "empty":"Košík je prázdný"
+      ]
     }
+  },
+
+  "products": {
+    "title": "Produkty",
+    "searching": "vyhledávání",
+    "rating": {
+      "votes": "hlasů",
+      "from": "z",
+      "ratepopup1": "Hodnotit ",
+      "ratepopup2": " hvězdiček"
+    },
+    "filter": {
+      "show": "Zobrazit filtr",
+      "title": "Filtrovat produkty",
+      "category": "Kategorie",
+      "pricefrom": "Cena od",
+      "priceto": "Cena do",
+      "sorting": "Řazení",
+      "all": "Vše",
+      "none": "Žádné",
+      "priceasc": "Cena vzestupně",
+      "pricedes": "Cena sestupně",
+      "az": "Název A až Z",
+      "za": "Název Z až A",
+      "reset": "Resetovat filtry"
+    },
+    "addtocart": "Přidat do košíku"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "coworkers": "Pracovníci",
+    "hover": "Přejeď myší pro odkazy",
+    "formtitle": "Kontaktujte nás",
+    "name": "Jméno",
+    "email": "Emailová adresa",
+    "text": "Zpráva",
+    "send": "Odeslat",
+    "popup": {
+      "fieldempty": "Vyplň prosím všechna pole.",
+      "emailinvalid": "Zadej platnou e-mailovou adresu.",
+      "messagesent": "Zpráva odeslána!"
+    }
+  },
+  "cart": {
+    "title": "Košík",
+    "image": "Obrázek",
+    "name": "Název",
+    "price": "Cena",
+    "amount": "Množství",
+    "total": "Celkem",
+    "delete": "Vyprázdnit celý košík",
+    "empty": "Košík je prázdný"
+  },
+  "termsconditions": {
+    "title": "Obchodní podmínky",
+    "h1": "1. Úvodní ustanovení",
+    "t1": "1.1 Tyto obchodní podmínky (dále jen „Obchodní podmínky“) upravují vzájemná práva a povinnosti mezi společností [Název společnosti], se sídlem [Adresa], IČO: [IČ], zapsanou v obchodním rejstříku vedeném [rejstříkový soud], (dále jen „Prodávající“), a kupujícím (dále jen „Kupující“), vzniklé v souvislosti s uzavřením kupní smlouvy prostřednictvím internetového obchodu Prodávajícího na adrese [URL e-shopu] (dále jen „E-shop“). 1.2 Kupujícím je spotřebitel nebo podnikatel.",
+    "h2": "2. Uzavření kupní smlouvy",
+    "t2": "2.1 Veškerá prezentace zboží na stránkách E-shopu je informativního charakteru a Prodávající není povinen uzavřít kupní smlouvu ohledně tohoto zboží. 2.2 Kupní smlouva vzniká odesláním objednávky Kupujícím a jejím potvrzením ze strany Prodávajícího na e-mailovou adresu Kupujícího.",
+    "h3": "3. Cena a platební podmínky",
+    "t3": "3.1 Ceny zboží jsou uvedeny včetně daně z přidané hodnoty (DPH) a všech souvisejících poplatků. 3.2 Kupující může cenu uhradit následujícími způsoby: bezhotovostně platební kartou, bankovním převodem, na dobírku, prostřednictvím platební brány.",
+    "h4": "4. Dodací podmínky",
+    "t4": "4.1 Zboží je Kupujícímu doručeno na adresu uvedenou v objednávce. 4.2 Náklady na dodání zboží jsou uvedeny v objednávkovém formuláři.",
+    "h5": "5. Odstoupení od smlouvy",
+    "t5": "5.1 Kupující, který je spotřebitelem, má právo odstoupit od smlouvy bez udání důvodu ve lhůtě 14 dnů ode dne převzetí zboží. 5.2 Pro uplatnění práva na odstoupení od smlouvy musí Kupující kontaktovat Prodávajícího na e-mailové adrese: [email], a to s jednoznačným prohlášením o odstoupení od smlouvy.",
+    "h6": "6. Práva z vadného plnění (Reklamace)",
+    "t6": "6.1 Práva a povinnosti stran ohledně odpovědnosti za vady se řídí příslušnými obecně závaznými právními předpisy, zejména ustanoveními § 2099 a násl. občanského zákoníku. 6.2 Kupující je oprávněn uplatnit právo z vady, která se vyskytne u spotřebního zboží v době 24 měsíců od převzetí.",
+    "h7": "7. Závěrečná ustanovení",
+    "t7": "7.1 Kupní smlouva a Obchodní podmínky se řídí právním řádem České republiky. 7.2 Prodávající si vyhrazuje právo tyto Obchodní podmínky kdykoliv změnit. Nová verze nabývá účinnosti zveřejněním na E-shopu."
+  },
+  "privacypolicy": {
+    "title": "Zásady ochrany osobních údajů",
+    "h1": "1. Správce údajů",
+    "t1": "Správcem osobních údajů podle čl. 4 odst. 7 Nařízení Evropského parlamentu a Rady (EU) 2016/679 (dále jen „GDPR“) je Tým Beta, IČO: 12345678, se sídlem Praha 1, Česká republika, (dále jen „Správce“).",
+    "h2": "2. Zpracovávané údaje",
+    "t2": "Správce zpracovává následující osobní údaje: jméno a příjmení, adresa, e-mail, telefonní číslo, údaje o objednávkách.",
+    "h3": "3. Účel zpracování",
+    "t3": "Osobní údaje jsou zpracovávány za účelem: vyřízení objednávky, plnění právních povinností (např. vedení účetnictví), marketingu (zasílání newsletteru, pokud s tím subjekt údajů souhlasil).",
+    "h4": "4. Doba uchování údajů",
+    "t4": "Údaje jsou uchovávány po dobu nezbytně nutnou, tj. po dobu trvání smluvního vztahu a dále po dobu, kterou ukládají obecně závazné právní předpisy (zejména zákon o účetnictví a zákon o DPH).",
+    "h5": "5. Příjemci údajů",
+    "t5": "Příjemci osobních údajů mohou být: přepravní společnosti, poskytovatelé IT služeb, účetní kanceláře, orgány veřejné moci v případech stanovených zákonem.",
+    "h6": "6. Práva subjektu údajů",
+    "t6": "Subjekt údajů má právo: na přístup ke svým údajům, na opravu či výmaz, na omezení zpracování, na přenositelnost údajů, vznést námitku proti zpracování, podat stížnost u Úřadu pro ochranu osobních údajů.",
+    "h7": "7. Závěrečné ustanovení",
+    "t7": "Správce přijal vhodná technická a organizační opatření k zabezpečení osobních údajů. Zásady mohou být aktualizovány; aktuální verze je vždy dostupná na eshopteamubeta.com."
+  }
 }

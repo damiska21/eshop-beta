@@ -7,7 +7,7 @@
   },
   "footer": {
     "contact": "Contact",
-    "email": "Email: info@eshop.cz",
+    "email": "Email: info@eshopteamubeta.com",
     "phone": "Phone: +420 123 456 789",
     "adress": "Address: Prague 1, Czech Republic",
     "links": "Links",
@@ -88,5 +88,39 @@
     "total": "Total",
     "delete": "Empty cart",
     "empty": "Cart is empty"
+  },
+  "termsconditions": {
+    "title": "Terms and Conditions",
+    "h1": "1. Introductory Provisions",
+    "t1": "1.1 These terms and conditions (hereinafter referred to as the \"Terms and Conditions\") govern the mutual rights and obligations between the company [Company Name], with its registered office at [Address], Company ID: [ID], registered in the Commercial Register maintained by [Register Court], (hereinafter referred to as the \"Seller\"), and the buyer (hereinafter referred to as the \"Buyer\"), arising in connection with the conclusion of a purchase contract via the Seller's online store at [E-shop URL] (hereinafter referred to as the \"E-shop\"). 1.2 The buyer is a consumer or an entrepreneur.",
+    "h2": "2. Conclusion of the Purchase Contract",
+    "t2": "2.1 All product presentations on the E-shop website are of an informative nature and the Seller is not obliged to conclude a purchase contract for these products. 2.2 The purchase contract is concluded by the Buyer submitting an order and its confirmation by the Seller to the Buyer's email address.",
+    "h3": "3. Price and Payment Terms",
+    "t3": "3.1 Product prices are stated including value-added tax (VAT) and all related fees. 3.2 The Buyer may pay the price by: cashless payment by card, bank transfer, cash on delivery, or via a payment gateway.",
+    "h4": "4. Delivery Terms",
+    "t4": "4.1 The goods are delivered to the Buyer at the address specified in the order. 4.2 Delivery costs are specified in the order form.",
+    "h5": "5. Withdrawal from the Contract",
+    "t5": "5.1 A Buyer who is a consumer has the right to withdraw from the contract without giving any reason within 14 days from receipt of the goods. 5.2 To exercise the right of withdrawal, the Buyer must contact the Seller at the email address: [email], with a clear statement of withdrawal from the contract.",
+    "h6": "6. Rights from Defective Performance (Complaints)",
+    "t6": "6.1 The rights and obligations of the parties regarding liability for defects are governed by applicable legal regulations, in particular the provisions of § 2099 et seq. of the Civil Code. 6.2 The Buyer is entitled to exercise the right for a defect that appears in consumer goods within 24 months from receipt.",
+    "h7": "7. Final Provisions",
+    "t7": "7.1 The purchase contract and the Terms and Conditions are governed by the laws of the Czech Republic. 7.2 The Seller reserves the right to change these Terms and Conditions at any time. The new version becomes effective upon publication on the E-shop."
+  },
+  "privacypolicy": {
+    "title": "Privacy Policy",
+    "h1": "1. Data Controller",
+    "t1": "The data controller according to Article 4(7) of Regulation (EU) 2016/679 of the European Parliament and of the Council (hereinafter referred to as \"GDPR\") is Tým Beta, Company ID: 12345678, registered office in Prague 1, Czech Republic (hereinafter referred to as the \"Controller\").",
+    "h2": "2. Processed Data",
+    "t2": "The Controller processes the following personal data: name and surname, address, email, phone number, order data.",
+    "h3": "3. Purpose of Processing",
+    "t3": "Personal data are processed for the purpose of: order processing, fulfillment of legal obligations (e.g. accounting), marketing (newsletter sending, if the data subject has consented).",
+    "h4": "4. Data Retention Period",
+    "t4": "Data are stored for the necessary period, i.e., for the duration of the contractual relationship and further for the period required by generally binding legal regulations (especially the Accounting Act and the VAT Act).",
+    "h5": "5. Data Recipients",
+    "t5": "Recipients of personal data may include: shipping companies, IT service providers, accounting firms, public authorities in cases specified by law.",
+    "h6": "6. Data Subject Rights",
+    "t6": "The data subject has the right to: access their data, correct or delete data, restrict processing, data portability, object to processing, file a complaint with the Data Protection Authority.",
+    "h7": "7. Final Provision",
+    "t7": "The Controller has implemented appropriate technical and organizational measures to secure personal data. The policy may be updated; the current version is always available at eshopteamubeta.com."
   }
 }

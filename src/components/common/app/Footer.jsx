@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLocalization } from "../../../contexts/LocalizationContext";
 import "./Footer.css";
 
@@ -32,19 +33,19 @@ function Footer() {
             <h5 className="text-uppercase">{strings.footer.links}</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="footer-text-link">
+                <Link to="/contact-us" className="footer-text-link">
                   {strings.footer.aboutus}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="footer-text-link">
+                <Link to="/termsconditions" className="footer-text-link">
                   {strings.footer.termsconditions}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="footer-text-link">
+                <Link to="/privacypolicy" className="footer-text-link">
                   {strings.footer.privacypolicy}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
