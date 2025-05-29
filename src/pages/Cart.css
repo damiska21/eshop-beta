@@ -282,4 +282,8 @@
     max-width: 100%;
     padding: 0 1rem;
   }
+
+  .cart-total-row td {
+    background-color: transparent;
+  }
 }

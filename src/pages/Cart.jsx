@@ -74,7 +74,7 @@ export default function Cart() {
                   />
                 </td>
                 <td className="cell-total" data-label={strings.cart.total}>
-                  {(product.price * product.quantity).toFixed(2)} Kč
+                  {(product.price * product.quantity).toFixed(2)}&nbsp;Kč
                 </td>
                 <td className="cell-remove">
                   <button onClick={() => removeFromCart(product.id)}>
@@ -88,7 +88,7 @@ export default function Cart() {
               <td colSpan="4" style={{ textAlign: "right", fontWeight: "bold" }}>
                 {strings.cart.total}
               </td>
-              <td style={{ fontWeight: "bold" }}>{price.toFixed(2)} Kč</td>
+              <td style={{ fontWeight: "bold" }}>{price.toFixed(2)}&nbsp;Kč</td>
               <td></td>
             </tr>
           </tbody>
