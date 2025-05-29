@@ -7,7 +7,7 @@
   },
   "footer": {
     "contact": "Contact",
-    "email": "Email : info@eshop.cz",
+    "email": "Email : info@eshopteamubeta.com",
     "phone": "Téléphone : +420 123 456 789",
     "adress": "Adresse : Prague 1, République tchèque",
     "links": "Liens",
@@ -88,5 +88,39 @@
     "total": "Total",
     "delete": "Vider le panier",
     "empty": "Le panier est vide"
+  },
+  "termsconditions": {
+    "title": "Conditions Générales",
+    "h1": "1. Dispositions Initiales",
+    "t1": "1.1 Les présentes conditions générales (ci-après les « Conditions Générales ») régissent les droits et obligations entre la société [Nom de la société], dont le siège social est situé à [Adresse], n° d'identification : [IČ], inscrite au registre du commerce tenu par [Tribunal du registre], (ci-après le « Vendeur »), et l'acheteur (ci-après l'« Acheteur »), découlant de la conclusion d'un contrat d'achat via la boutique en ligne du Vendeur à l'adresse [URL de la boutique] (ci-après la « Boutique en ligne »). 1.2 L'acheteur est un consommateur ou un entrepreneur.",
+    "h2": "2. Conclusion du Contrat d’Achat",
+    "t2": "2.1 Toute présentation de produit sur la Boutique en ligne est de nature informative et le Vendeur n'est pas obligé de conclure un contrat d'achat pour ces produits. 2.2 Le contrat d'achat est conclu par l'envoi de la commande par l'Acheteur et sa confirmation par le Vendeur à l'adresse e-mail de l'Acheteur.",
+    "h3": "3. Prix et Conditions de Paiement",
+    "t3": "3.1 Les prix des produits sont indiqués toutes taxes comprises (TVA) et incluent tous les frais associés. 3.2 L'Acheteur peut payer le prix comme suit : paiement sans numéraire par carte, virement bancaire, contre-remboursement, ou via une passerelle de paiement.",
+    "h4": "4. Conditions de Livraison",
+    "t4": "4.1 Les produits sont livrés à l'adresse indiquée par l'Acheteur dans la commande. 4.2 Les frais de livraison sont précisés dans le formulaire de commande.",
+    "h5": "5. Rétractation du Contrat",
+    "t5": "5.1 L'Acheteur qui est un consommateur a le droit de se rétracter du contrat sans donner de motif dans un délai de 14 jours à compter de la réception des produits. 5.2 Pour exercer son droit de rétractation, l'Acheteur doit contacter le Vendeur à l'adresse e-mail suivante : [email], avec une déclaration claire de rétractation du contrat.",
+    "h6": "6. Droits liés à la Conformité (Réclamations)",
+    "t6": "6.1 Les droits et obligations concernant la responsabilité pour défauts sont régis par la législation applicable, notamment les dispositions des § 2099 et suivants du Code civil. 6.2 L'Acheteur a le droit de faire valoir un défaut constaté sur un produit de consommation dans un délai de 24 mois à compter de sa réception.",
+    "h7": "7. Dispositions Finales",
+    "t7": "7.1 Le contrat d'achat et les Conditions Générales sont régis par le droit tchèque. 7.2 Le Vendeur se réserve le droit de modifier ces Conditions Générales à tout moment. La nouvelle version entre en vigueur dès sa publication sur la Boutique en ligne."
+  },
+  "privacypolicy": {
+    "title": "Politique de Confidentialité",
+    "h1": "1. Responsable du Traitement",
+    "t1": "Le responsable du traitement des données au sens de l'article 4(7) du Règlement (UE) 2016/679 du Parlement européen et du Conseil (ci-après le « RGPD ») est Tým Beta, numéro d'identification : 12345678, dont le siège est situé à Prague 1, République tchèque (ci-après le « Responsable »).",
+    "h2": "2. Données Traitées",
+    "t2": "Le Responsable traite les données personnelles suivantes : nom et prénom, adresse, e-mail, numéro de téléphone, données de commande.",
+    "h3": "3. Finalité du Traitement",
+    "t3": "Les données personnelles sont traitées aux fins suivantes : traitement des commandes, respect des obligations légales (ex. comptabilité), marketing (envoi de newsletters, si la personne concernée a donné son consentement).",
+    "h4": "4. Durée de Conservation des Données",
+    "t4": "Les données sont conservées pendant la durée nécessaire, c’est-à-dire pendant la relation contractuelle et aussi longtemps que les lois en vigueur l'exigent (notamment la loi comptable et la loi sur la TVA).",
+    "h5": "5. Destinataires des Données",
+    "t5": "Les destinataires des données personnelles peuvent être : les entreprises de transport, les prestataires de services informatiques, les cabinets comptables, les autorités publiques dans les cas prévus par la loi.",
+    "h6": "6. Droits de la Personne Concernée",
+    "t6": "La personne concernée a le droit : d'accéder à ses données, de les rectifier ou de les effacer, de limiter leur traitement, à la portabilité des données, de s'opposer au traitement, de déposer une plainte auprès de l'autorité de protection des données.",
+    "h7": "7. Disposition Finale",
+    "t7": "Le Responsable a mis en place des mesures techniques et organisationnelles appropriées pour protéger les données personnelles. La politique peut être mise à jour ; la version actuelle est toujours disponible sur eshopteamubeta.com."
   }
 }
