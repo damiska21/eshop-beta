@@ -12,7 +12,7 @@ import TermsConditions from "../pages/TermsConditions";
 export default function NavbarRoutes() {
   return (
     <div className="flex-grow-1 ">
-      <Routes basename="/eshop-beta">
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products filterImport={[]} />} />
         <Route path="/contact-us" element={<Contact />} />
