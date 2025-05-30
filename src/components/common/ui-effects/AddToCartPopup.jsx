@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Toast } from "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useLocalization } from "../../../contexts/LocalizationContext.jsx";
 
 let toastInstance = null;
 
@@ -19,6 +20,7 @@ export function showCartToast() {
 }
 
 export function CartToast() {
+  const { strings } = useLocalization();
   useEffect(() => {
     const toastEl = document.getElementById("cart-toast");
     if (toastEl) {
@@ -39,7 +41,9 @@ export function CartToast() {
         aria-atomic="true"
       >
         <div className="d-flex">
-          <div className="toast-body">🛒 Přidáno do košíku!</div>
+          <div className="toast-body">
+            🛒 {strings.products.addedtocartpopup}
+          </div>
           <button
             type="button"
             className="btn-close btn-close-white me-2 m-auto"

@@ -16,41 +16,41 @@
     "privacypolicy": "Politique de confidentialité"
   },
   "home": {
-  "h1": "Bienvenue sur la boutique en ligne de l'équipe Beta",
-  "h2": "À propos de nous",
-  "text1": "Nous sommes une équipe de passionnés spécialisés dans la création d'une boutique en ligne de qualité, où vous trouverez un large choix de produits à des prix avantageux. Notre objectif est de vous offrir une expérience d'achat confortable et sécurisée avec une livraison rapide.",
-  "text2": "Nous attachons une grande importance à la satisfaction de nos clients, c'est pourquoi nous améliorons constamment nos services et ajoutons de nouvelles fonctionnalités pour faciliter votre choix et vos achats.",
-  "benefits": {
-    "title": "Pourquoi acheter chez nous ?",
-    "items": [
-      {
-        "title": "Livraison rapide",
-        "text": "Les produits sont expédiés sous 24 heures après commande."
-      },
-      {
-        "title": "Support client",
-        "text": "Notre équipe est disponible chaque jour pour vous aider."
-      },
-      {
-        "title": "Achat sécurisé",
-        "text": "Vos données sont protégées et les paiements sont sécurisés."
-      }
-    ]
+    "h1": "Bienvenue sur la boutique en ligne de l'équipe Beta",
+    "h2": "À propos de nous",
+    "text1": "Nous sommes une équipe de passionnés spécialisés dans la création d'une boutique en ligne de qualité, où vous trouverez un large choix de produits à des prix avantageux. Notre objectif est de vous offrir une expérience d'achat confortable et sécurisée avec une livraison rapide.",
+    "text2": "Nous attachons une grande importance à la satisfaction de nos clients, c'est pourquoi nous améliorons constamment nos services et ajoutons de nouvelles fonctionnalités pour faciliter votre choix et vos achats.",
+    "benefits": {
+      "title": "Pourquoi acheter chez nous ?",
+      "items": [
+        {
+          "title": "Livraison rapide",
+          "text": "Les produits sont expédiés sous 24 heures après commande."
+        },
+        {
+          "title": "Support client",
+          "text": "Notre équipe est disponible chaque jour pour vous aider."
+        },
+        {
+          "title": "Achat sécurisé",
+          "text": "Vos données sont protégées et les paiements sont sécurisés."
+        }
+      ]
+    },
+    "howItWorksTitle": "Comment ça marche ?",
+    "howItWorksSteps": [
+      "Choisissez un produit",
+      "Ajoutez-le au panier",
+      "Payez facilement",
+      "Attendez la livraison"
+    ],
+    "reviewsTitle": "Ce que disent nos clients",
+    "reviews": [
+      { "text": "Produits excellents et livraison rapide !", "author": "Jana" },
+      { "text": "Communication et qualité remarquables.", "author": "Martin" }
+    ],
+    "cta": "Voir les produits"
   },
-  "howItWorksTitle": "Comment ça marche ?",
-  "howItWorksSteps": [
-    "Choisissez un produit",
-    "Ajoutez-le au panier",
-    "Payez facilement",
-    "Attendez la livraison"
-  ],
-  "reviewsTitle": "Ce que disent nos clients",
-  "reviews": [
-    { "text": "Produits excellents et livraison rapide !", "author": "Jana" },
-    { "text": "Communication et qualité remarquables.", "author": "Martin" }
-  ],
-  "cta": "Voir les produits"
-},
   "products": {
     "title": "Produits",
     "searching": "recherche",
@@ -75,34 +75,35 @@
       "za": "Nom Z à A",
       "reset": "Réinitialiser les filtres"
     },
-    "addtocart": "Ajouter au panier"
+    "addtocart": "Ajouter au panier",
+    "addedtocartpopup": "Ajouté au panier!"
   },
   "contact": {
-  "title": "Contact",
-  "coworkers": "Équipe",
-  "hover": "Survolez pour les liens",
-  "formtitle": "Contactez-nous",
-  "name": "Nom",
-  "email": "Adresse e-mail",
-  "text": "Message",
-  "send": "Envoyer",
-  "popup": {
-    "fieldempty": "Veuillez remplir tous les champs.",
-    "emailinvalid": "Veuillez entrer une adresse e-mail valide.",
-    "messagesent": "Message envoyé !"
+    "title": "Contact",
+    "coworkers": "Équipe",
+    "hover": "Survolez pour les liens",
+    "formtitle": "Contactez-nous",
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "text": "Message",
+    "send": "Envoyer",
+    "popup": {
+      "fieldempty": "Veuillez remplir tous les champs.",
+      "emailinvalid": "Veuillez entrer une adresse e-mail valide.",
+      "messagesent": "Message envoyé !"
+    },
+    "basicinfo": "Informations de base",
+    "companyname": "Équipe Beta SARL",
+    "adress": "Prague 1, République tchèque",
+    "email": "info@eshopteamubeta.com",
+    "phone": "+420 123 456 789",
+    "opening": "Horaires d'ouverture",
+    "monfri": "Lundi–Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "closed": "Fermé",
+    "socials": "Réseaux sociaux"
   },
-  "basicinfo": "Informations de base",
-  "companyname": "Équipe Beta SARL",
-  "adress": "Prague 1, République tchèque",
-  "email": "info@eshopteamubeta.com",
-  "phone": "+420 123 456 789",
-  "opening": "Horaires d'ouverture",
-  "monfri": "Lundi–Vendredi",
-  "saturday": "Samedi",
-  "sunday": "Dimanche",
-  "closed": "Fermé",
-  "socials": "Réseaux sociaux"
-},
   "cart": {
     "title": "Panier",
     "image": "Image",

@@ -77,34 +77,35 @@
       "za": "Název Z až A",
       "reset": "Resetovat filtry"
     },
-    "addtocart": "Přidat do košíku"
+    "addtocart": "Přidat do košíku",
+    "addedtocartpopup": "Přidáno do košíku!"
   },
   "contact": {
-  "title": "Kontakt",
-  "coworkers": "Pracovníci",
-  "hover": "Přejeď myší pro odkazy",
-  "formtitle": "Kontaktujte nás",
-  "name": "Jméno",
-  "email": "Emailová adresa",
-  "text": "Zpráva",
-  "send": "Odeslat",
-  "popup": {
-    "fieldempty": "Vyplň prosím všechna pole.",
-    "emailinvalid": "Zadej platnou e-mailovou adresu.",
-    "messagesent": "Zpráva odeslána!"
+    "title": "Kontakt",
+    "coworkers": "Pracovníci",
+    "hover": "Přejeď myší pro odkazy",
+    "formtitle": "Kontaktujte nás",
+    "name": "Jméno",
+    "email": "Emailová adresa",
+    "text": "Zpráva",
+    "send": "Odeslat",
+    "popup": {
+      "fieldempty": "Vyplň prosím všechna pole.",
+      "emailinvalid": "Zadej platnou e-mailovou adresu.",
+      "messagesent": "Zpráva odeslána!"
+    },
+    "basicinfo": "Základní informace",
+    "companyname": "Tým Beta s.r.o.",
+    "adress": "Praha 1, Česká republika",
+    "email": "info@eshopteamubeta.com",
+    "phone": "+420 123 456 789",
+    "opening": "Otevírací doba",
+    "monfri": "Pondělí–Pátek",
+    "saturday": "Sobota",
+    "sunday": "Neděle",
+    "closed": "Zavřeno",
+    "socials": "Sociální sítě"
   },
-  "basicinfo": "Základní informace",
-  "companyname": "Tým Beta s.r.o.",
-  "adress": "Praha 1, Česká republika",
-  "email": "info@eshopteamubeta.com",
-  "phone": "+420 123 456 789",
-  "opening": "Otevírací doba",
-  "monfri": "Pondělí–Pátek",
-  "saturday": "Sobota",
-  "sunday": "Neděle",
-  "closed": "Zavřeno",
-  "socials": "Sociální sítě"
-},
   "cart": {
     "title": "Košík",
     "image": "Obrázek",
