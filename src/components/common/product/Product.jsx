@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../../contexts/CartContext";
 import { RatingContext } from "../../../contexts/RatingContext";
 import { useLocalization } from "../../../contexts/LocalizationContext";
+import { showCartToast } from "../ui-effects/AddToCartPopup";
 
 function Product({ id, title, description, image, price }) {
   const { addToCart } = useCart();
@@ -69,6 +70,7 @@ function Product({ id, title, description, image, price }) {
         onClick={(e) => {
           e.preventDefault();
           addToCart(id);
+          showCartToast();
         }}
       >
         {strings.products.addtocart}
